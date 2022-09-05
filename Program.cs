@@ -10,7 +10,7 @@ namespace _1st_Lesson
              * 1. Find your BMI - body mass index
              */
 
-            // my solution
+            // my solution with redrafts
             Console.ReadKey();
 
              /* 2. Find the length of the ellipse sector curve with:
