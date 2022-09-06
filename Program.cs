@@ -62,7 +62,7 @@ namespace _1st_Lesson
             bool t = true, f;
             f = false;
             t = 5 > 2;
-            t = (1 == 0) || ((1 > 0) && true));
+            t = (1 == 0) || ((1 > 0) && true);
             f = !t;
 
             Console.WriteLine($"True is {t,10}. false is {f,-10}"); 
