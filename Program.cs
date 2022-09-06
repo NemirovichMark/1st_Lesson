@@ -56,6 +56,21 @@ namespace _1st_Lesson
             Console.WriteLine($"Zero is " + digit); 
             // тут идет преобразование символа в строку, так как строка - это набор символов
             #endregion
+ 
+                
+            #region Bools
+            bool t = true, f;
+            f = false;
+            t = 5 > 2;
+            t = (1 == 0) || ((1 > 0) && true));
+            f = !t;
+            
+            Console.WriteLine($"True is {t,10}. false is {f,-10}); 
+            #endregion
+
+            Console.WriteLine($"Zero is " + digit); 
+            // тут идет преобразование символа в строку, так как строка - это набор символов
+            #endregion
 
             #region Casting and type conversion
             #region Implicit Conversions
