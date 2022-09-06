@@ -161,11 +161,9 @@ namespace _1st_Lesson
              *  b = age - (a / № in the group)
              *  grad = 10 * (№ in the group)
              * 
-             * 3. Find the number of games need you to loose your money if:
-             *  initialSum = 10 * (10 + № in the group / 10)
-             *  bet = 1/4 of your money rounded up
-             *  you get x2 of bet if win else you lose you bet
-             *  chance to win = (50 - № in the group)
+             * 3. Find the step (d) and nth term of an Arithmetic Sequence when:
+             *  a0 = (№ in the group)
+             *  S = 1ddmm of your birth day
              */
         }
     }
