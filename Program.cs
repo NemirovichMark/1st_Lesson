@@ -58,14 +58,14 @@ namespace _1st_Lesson
             #endregion
  
                 
-            #region Bools
+            #region Booleans
             bool t = true, f;
             f = false;
             t = 5 > 2;
             t = (1 == 0) || ((1 > 0) && true));
             f = !t;
-            
-            Console.WriteLine($"True is {t,10}. false is {f,-10}); 
+
+            Console.WriteLine($"True is {t,10}. false is {f,-10})"; 
             #endregion
 
             Console.WriteLine($"Zero is " + digit); 
