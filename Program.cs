@@ -172,7 +172,7 @@ namespace _1st_Lesson
              * 1. Find your BMI - body mass index
              * 
              * 2. Find the length of the ellipse sector curve with:
-             *  a = %(№ in the group)
+             *  a = 100%№ in the group)
              *  b = age - (a / № in the group)
              *  grad = 10 * (№ in the group)
              * 
