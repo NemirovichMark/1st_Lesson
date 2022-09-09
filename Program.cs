@@ -28,30 +28,37 @@ namespace _1st_Lesson
             #endregion
 
             #region Arithmetic Sequence
+            string errorMessage = "\nYou've given a wrong value! Please, restart the program...";
+
             int a0 = 1;
             int S = 11702;
+            int n = 0;
 
-            Console.WriteLine("Arithmetic sequence: There isn't enough data for solving this task correctly (see the comments)");
+            Console.WriteLine("\nAnd for the third task please specify the count of terms");
+            Console.WriteLine("(!) It must be a positive integer!");
+            Console.Write("Your value: ");
 
-            /* Explanation
-             *
-             * In the task conditions we have only two variables specified - a0 and S.
-             * 
-             *                              2a1 + d(n-1)
-             * The formula for S is: Sn = --------------- * n
-             *                                   2
-             * 
-             *                                2 + d(n-1)
-             * With my data we get: 11702 = --------------- * n 
-             *                                    2
-             *                                    
-             * So we have an equation with two variables. And that means we have a set of answers
-             * witout any criteria to pick one, that fits for us.
-             * 
-             * Even if we try to use brute-force method to find variable d we will get at least two possible answers,
-             * just because we always have one obvious, where d = 1. And it might be a right solution, because using d = 1 we
-             * can find other variables.
-             */
+            if (int.TryParse(Console.ReadLine(), out n))
+            {
+                if (n <= 0)
+                {
+                    Console.WriteLine(errorMessage);
+                }
+                else
+                {
+                    double d = (2.0 * S - 2.0 * a0 * n) / (n * (n - 1.0));
+                    double an = 2.0 * S / n - a0;
+
+                    Console.WriteLine("\nSo the solution is:");
+                    Console.WriteLine($"  d = {Math.Round(d, 3)}");
+                    Console.WriteLine($"  an = {Math.Round(an, 3)}");
+                }
+                
+            }
+            else
+            {
+                Console.WriteLine(errorMessage);
+            }
             #endregion
         }
 
