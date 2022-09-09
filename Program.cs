@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _1st_Lesson
 {
@@ -52,6 +52,21 @@ namespace _1st_Lesson
             char letter = 'a';
             char digit = '0';
             char symbol = '+';
+
+            Console.WriteLine($"Zero is " + digit); 
+            // тут идет преобразование символа в строку, так как строка - это набор символов
+            #endregion
+ 
+                
+            #region Booleans
+            bool t = true, f;
+            f = false;
+            t = 5 > 2;
+            t = (1 == 0) || ((1 > 0) && true);
+            f = !t;
+
+            Console.WriteLine($"True is {t,10}. false is {f,-10}"); 
+            #endregion
 
             Console.WriteLine($"Zero is " + digit); 
             // тут идет преобразование символа в строку, так как строка - это набор символов
@@ -157,7 +172,7 @@ namespace _1st_Lesson
              * 1. Find your BMI - body mass index
              * 
              * 2. Find the length of the ellipse sector curve with:
-             *  a = %(№ in the group)
+             *  a = 100 % (№ in the group)
              *  b = age - (a / № in the group)
              *  grad = 10 * (№ in the group)
              * 
