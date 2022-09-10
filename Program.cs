@@ -180,6 +180,31 @@ namespace _1st_Lesson
              *  a0 = (№ in the group)
              *  S = 1ddmm of your birth day
              */
+               #region Task1
+                double height = 1.75 /* в метрах */, weight = 55 /* в килограммах */, BMI;
+                BMI = (weight / (height * height));
+                Console.WriteLine(BMI);
+            #endregion
+
+            #region Task2
+                const int groupnumber = 13, age = 18;
+                double a = 100 % groupnumber;
+                double b = age - (a / groupnumber);
+                int grad = 10 * groupnumber;
+                double len_ellip = Math.PI * (a + b);
+                double result = (len_ellip * grad) / 360;
+                Console.WriteLine(result);
+            #endregion
+
+            #region Task3
+                const int a0 = 13, s = 12908;
+                double Step;
+                Console.WriteLine("Введите номер члена арифметической прогрессии (>=2)");
+                int n = Convert.ToInt32(Console.ReadLine());
+                double a_n = 2 * s / n - a0; // Из формулы S = ((a0 + a_n) * n) / 2
+                Step = (a_n - a0) / (n - 1); // Из формулы a_n = a0 + (n-1)*Step
+                Console.WriteLine(Step);
+            #endregion
         }
     }
 }
