@@ -1,4 +1,5 @@
-﻿using System;
+
+using System;
 using System.Dynamic;
 using System.Linq.Expressions;
 using System.Net.Http.Headers;
@@ -82,4 +83,3 @@ namespace _1st_Lesson
             }
             
             #endregion
-
