@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 namespace _1st
 {
     class Program
@@ -34,7 +34,7 @@ namespace _1st
             int a0 = 11;
             int S = 5052004;
             int n = int.Parse(Console.ReadLine());
-            double an = (2*S / n) - a0;
+            double an = (2 * S / n) - a0;
             double d = (an - a0) / (n - 1);
             Console.WriteLine($"Step is {d} and nth term is {an}");
 
