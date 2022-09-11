@@ -180,6 +180,31 @@ namespace _1st_Lesson
              *  a0 = (№ in the group)
              *  S = 1ddmm of your birth day
              */
+                
+            #region Task_1
+            int weight = 65;
+            int height = 190;
+            double BMI = weight / Math.Pow(height, 2);
+            Console.WriteLine(BMI);
+            #endregion
+
+            #region Task_2 
+            double a = 100 % 19;
+            double b = 18 - (a / 19);
+            double grad = 10 * 19;
+            double ellipse = Math.PI * (a + b) * Math.Sin(grad);
+            Console.WriteLine(ellipse);
+            #endregion
+
+            #region Task_3
+            int a0 = 19;
+            int S = 12206;
+            Console.WriteLine("Enter value(n):");
+            int n = Int32.Parse(Console.ReadLine());
+            double an = S * 2 / n - a0;
+            double step = (an - a0) / n;
+            Console.WriteLine(step);
+            #endregion
         }
     }
 }
