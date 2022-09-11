@@ -10,6 +10,8 @@ namespace _1st_Lesson
             double weight = 58.2;
             double height = 1.653;
             double bmi = Math.Round(weight / (height * height), 3);
+            
+            Console.WriteLine($"My body mass index is: {bmi}");
             #endregion
 
             #region Ellipse sector curve length
