@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _1st_Lesson
 {
@@ -10,8 +10,6 @@ namespace _1st_Lesson
             double weight = 58.2;
             double height = 1.653;
             double bmi = Math.Round(weight / (height * height), 3);
-
-            Console.WriteLine($"My body mass index is: {bmi}");
             #endregion
 
             #region Ellipse sector curve length
@@ -66,7 +64,7 @@ namespace _1st_Lesson
              * 1. Find your BMI - body mass index
              * 
              * 2. Find the length of the ellipse sector curve with:
-             *  a = %(№ in the group)
+             *  a = 100 % (№ in the group)
              *  b = age - (a / № in the group)
              *  grad = 10 * (№ in the group)
              * 
