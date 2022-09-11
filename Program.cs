@@ -1,11 +1,8 @@
 using System;
 
-namespace _1st_Lesson
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace _1st_Lesson {
+    class Program {
+        static void Main(string[] args) {
             /* Tasks:
              * 1. Find your BMI - body mass index
              * 
