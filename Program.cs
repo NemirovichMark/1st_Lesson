@@ -33,8 +33,7 @@ namespace _1st_Lesson {
             // 3
             double first_elem = 17;
             double s = 12209;
-            if (!int.TryParse(Console.ReadLine(), out int cnt))
-            {
+            if (!int.TryParse(Console.ReadLine(), out int cnt)) {
                 Console.WriteLine("Input not correct!");
                 return;
             }
