@@ -7,19 +7,9 @@ namespace _1st_Lesson
     {
         static void Main(string[] args)
         {
-            {//EX1
-                const double Weight = 67.7;
-                const double Height = 1.83;
-                double ans1 = 0;
-                if (Height==0)
-                {
-                    ans1 = 0;
-                }
-                else
-                {
-                    ans1= Weight / (Height * Height);
-                }
-                Console.WriteLine(ans1);
+
+=======
+
             }
             {//EX2
                 const int a = 100 % 8;
@@ -45,7 +35,7 @@ namespace _1st_Lesson
                 Console.WriteLine(ans3);
 
             }
-
+            
         }
 
     }
