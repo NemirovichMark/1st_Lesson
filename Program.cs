@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _1st_Lesson
 {
@@ -12,6 +12,7 @@ namespace _1st_Lesson
             double BMI;
             BMI = weight / (Math.Pow(height, 2));
             Console.WriteLine($"My BMI: {BMI}");
+
 
             #endregion
 
