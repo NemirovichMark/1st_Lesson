@@ -167,7 +167,29 @@ namespace _1st_Lesson
                 Console.WriteLine($"The f({x}) = {y}");
             }
             #endregion
-
+            
+            #region Task_1
+            double wheight = 47;
+            double  tall = 164;
+            double bmi = (wheight / tall * tall);
+            Console.WriteLine(bmi);
+            #endregion
+            #region Task_2
+            int a = 100 % 17;
+            int b = 17 - (a/17);
+            int grad = 10 * 17;
+            double p = Math.PI * (a + b) * Math.Sin(Math.PI * grad / 180);
+            Console.WriteLine(p);
+            #endregion
+            #region Task_1
+            int a0 = 17;
+            int S = 12910;
+            int n = Convert.ToInt32(Console.ReadLine());
+            double an = 2 * S / n - a0;
+            double d = (an- a0)/n;
+            Console.WriteLine(d);
+            Console.WriteLine(an);
+            #endregiond
             /* Tasks:
              * 1. Find your BMI - body mass index
              * 
