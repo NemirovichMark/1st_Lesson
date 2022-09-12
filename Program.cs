@@ -183,3 +183,48 @@ namespace _1st_Lesson
         }
     }
 }
+
+// Вы неверно написали мою фамилию, правильно будет Kovalyuk
+
+using System;
+
+namespace _1st_Lesson
+{
+    class program
+    {
+        static void Main(string[] args)
+        {
+            #region task1
+            Console.WriteLine("Task One");
+            double a = 1.63;
+            int b = 49;
+            double bmi = b / (a * a);
+            Console.WriteLine(bmi);
+            #endregion
+
+            #region task2
+            Console.WriteLine("Task Two");
+            int aa = 100 % 15;
+            double bb = 18 - (aa / 15);    
+            double grad = 10 * 15;
+            double length;
+
+            grad = Math.PI * grad / 180.0;
+            length = Math.Sqrt((Math.Pow(a, 2) * Math.Pow(b, 2)) / (Math.Pow(a, 2) * Math.Pow(Math.Sin(grad), 2) + (Math.Pow(b, 2) * Math.Pow(Math.Cos(grad), 2))));
+            Console.WriteLine(length);
+            #endregion
+
+
+            #region task3
+            Console.WriteLine("Task Three");
+            int n = Int32.Parse(Console.ReadLine());
+            int a0 = 15;
+            int s = 10905;
+            double d = (2 * ((s / n) - a0)) / (n - 1);
+            double an = a0 + d * (n - 1);
+            Console.WriteLine(d);
+            Console.WriteLine(an);
+            #endregion
+        }
+    }
+}
