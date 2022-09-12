@@ -32,8 +32,8 @@ namespace _1st
             #endregion
 
             #region task 3
-            const long a0 = 19;
-            const long sum = 10101;
+            const long a0 = 7;
+            const long sum = 11706;
             Console.WriteLine("Введите интересующий член прогрессии ");
             long n = int.Parse(Console.ReadLine());
             long aN = sum / n * 2 - a0;
