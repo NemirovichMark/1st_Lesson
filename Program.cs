@@ -13,7 +13,7 @@ namespace hometask
             double BMI, height;
             weight = 70;
             height = 1.82;
-            BMI = weight / (Math.Pow(2, height));
+            BMI = weight / (Math.Pow(height, 2));
             Console.WriteLine($"BMI - {BMI}");
             #endregion task1
             #region task2
@@ -21,7 +21,7 @@ namespace hometask
             double b = 18 - (a / 18);
             double grad = 10 * 18;
             const double pi = 3.14;
-            double L = 4 * (pi * a * b + Math.Pow(2, a - b)) / (a + b);
+            double L = 4 * (pi * a * b + Math.Pow(a-b,2)) / (a + b);
             double length = L / 360 * grad;
             Console.WriteLine($"length - {length}");
             #endregion
@@ -30,9 +30,16 @@ namespace hometask
             double S = 12104.0;
             string vvod= Console.ReadLine();
             double amount = Convert.ToInt32(vvod);
-            double last_element = (S / amount) * 2.0 - a0;
-            double step = (last_element - a0) / (amount - 1.0);
-            Console.WriteLine($"last_element - {last_element}, step - {step}") ;
+            if (amount == 0)
+            {
+                Console.WriteLine($"last_element - 0, step - 0");
+            }
+            else
+            {
+                double last_element = (S / amount) * 2.0 - a0;
+                double step = (last_element - a0) / (amount - 1.0);
+                Console.WriteLine($"last_element - {last_element}, step - {step}");
+            }
             #endregion
         }
 
