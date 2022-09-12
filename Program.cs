@@ -24,7 +24,7 @@ namespace _1st_Lesson
 
             // Используйте интерполированные строки ($) для вывода и будет вам счастье
             Console.WriteLine($"Integers: a={a}, b={b}, c={c}, d={d}");
-            #endregion
+            #endregion  //
 
             #region Doubles
             double aa, bb = 5.0;
