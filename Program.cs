@@ -167,10 +167,31 @@ namespace _1st_Lesson
                 Console.WriteLine($"The f({x}) = {y}");
             }
             #endregion
+                #region1
+                string str;
+double a, b;
+Console.WriteLine("Введите свой рост в метрах");
+
+str=Console.ReadLine();
+
+a=Convert.ToDouble(str);
+
+
+Console.WriteLine("Введите свой вес");
+
+str = Console.ReadLine();
+
+b=Convert.ToDouble(str);
+
+double BMI = (b / (a * a));
+
+Console.WriteLine($"Ваш BMI = {BMI}");
+            #endregion1
+            
 
             /* Tasks:
              * 1. Find your BMI - body mass index
-             * 
+             *
              * 2. Find the length of the ellipse sector curve with:
              *  a = 100 % (№ in the group)
              *  b = age - (a / № in the group)
