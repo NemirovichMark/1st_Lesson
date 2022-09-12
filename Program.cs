@@ -1,4 +1,5 @@
-using System;
+﻿using System;
+
 namespace _1st
 {
     class Program
@@ -7,10 +8,7 @@ namespace _1st
         {
             #region Task 1
 
-            int weight = 71;
-            double height = 1.75;
-
-            double BMI = (weight / (height * height));
+            double BMI = (71 / (1.75 * 1.75));
             Console.WriteLine($"My BMI is {BMI}");
 
             #endregion
@@ -33,10 +31,20 @@ namespace _1st
 
             int a0 = 11;
             int S = 5052004;
-            int n = int.Parse(Console.ReadLine());
-            double an = (2 * S / n) - a0;
-            double d = (an - a0) / (n - 1);
-            Console.WriteLine($"Step is {d} and nth term is {an}");
+            Console.WriteLine("Enter the number of members of the progression:");
+            if (Int32.TryParse(Console.ReadLine(), out int n))
+            {
+                if (n >= 1)
+                {
+                    double an;
+                    double d;
+                    an = (2 * S / n) - a0;
+                    d = (an - a0) / (n - 1);
+
+                    Console.WriteLine($"Step is {d} and nth term is {an}");
+                }
+                else Console.WriteLine("This can't be"); 
+                }
 
             #endregion
         }
