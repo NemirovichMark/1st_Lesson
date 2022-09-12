@@ -180,6 +180,30 @@ namespace _1st_Lesson
              *  a0 = (№ in the group)
              *  S = 1ddmm of your birth day
              */
+                #region 1
+                double BMI = (65 / (Math.Pow(1.8,2)));
+            Console.WriteLine($ " My BMI is {BMI});
+                #endregion
+                              
+                #region 2
+                const double a = 100 % 5;
+                const double b = 17 - (a / 5);
+                const int grad = 10 * 5;
+                double result_all, result;
+                result_all = 4 * (Math.PI * a * b * (a - b) * (a - b)) / (a + b);
+                result = result_all / 360 * grad;
+                Console.WriteLine(result);
+                #endregion
+                              
+                #region 3
+                const int a0 = 5;
+                const s = 12909;
+                int n = Int32.Rarse(Console.ReadLine());
+                int an = s / n * 2 - a0;
+                double stepB = (an - a0) / n;
+                Console.WriteLine(b);
+                #endregion
+                
         }
     }
 }
