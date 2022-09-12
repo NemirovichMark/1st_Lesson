@@ -6,7 +6,6 @@ namespace _1st
     {
         static void Main()
         {
-
             #region task 1
             Console.WriteLine("Введите ваш рост в сантиметрах/enter your height in cm");
             decimal rost = Decimal.Parse(Console.ReadLine());
@@ -32,14 +31,15 @@ namespace _1st
             Console.WriteLine(otvet.ToString("N5"));
             #endregion
 
-            #region
-            const long a0 = 7;
-            const long sum = 11706;
+            #region task 3
+            const long a0 = 19;
+            const long sum = 10101;
             Console.WriteLine("Введите интересующий член прогрессии ");
             long n = int.Parse(Console.ReadLine());
             long aN = sum / n * 2 - a0;
-            double shagprogressi_D = (2*(sum - n * a0) / n * (n - 1));
+            double shagprogressi_D = (2.0 *sum - 2.0 * a0 * n) / (n * (n - 1.0));
             Console.WriteLine(shagprogressi_D.ToString());
+            Console.WriteLine(aN.ToString());
             #endregion
         }
     }
