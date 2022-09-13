@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _1st
 {
@@ -7,24 +7,23 @@ namespace _1st
         static void Main()
         {
             #region task 1
-                double height;
-                double weight;
+            double height;
+            double weight;
             Console.WriteLine("Введите ваш рост в метрах");
-            if (Double.TryParse(Console.ReadLine(), out height) && height>0) {
+            if (Double.TryParse(Console.ReadLine(), out height) && height > 0)
+            {
                 Console.WriteLine("Введите ваш вес в килограммах/enter your weight in kg");
-                if (Double.TryParse(Console.ReadLine(), out weight) && weight>0) {
+                if (Double.TryParse(Console.ReadLine(), out weight) && weight > 0)
+                {
                     Console.WriteLine("Ваш Индекс массы тела/your body mass index");
-                    Console.WriteLine(weight/(height*height));
+                    Console.WriteLine(weight / (height * height));
                 }
             }
             #endregion
-      
+
             #region task 2
-            
-            Console.WriteLine("Введите ваш номер в группе");
-            int num = int.Parse(Console.ReadLine());
-            Console.WriteLine("Введите ваш возраст/enter your age");
-            double age = int.Parse(Console.ReadLine());
+            const int num = 7;
+            const int  age = 18;
             double a = 100 % num;
             double b = age - (a / num);
             int grad = 10 * num;
@@ -36,12 +35,12 @@ namespace _1st
             #region task 3
             const long a0 = 7;
             const long sum = 11706;
-            Console.WriteLine("Введите интересующий член прогрессии ");
-            long n = int.Parse(Console.ReadLine());
-            long aN = sum / n * 2 - a0;
-            double shagprogressi_D = (2.0 *sum - 2.0 * a0 * n) / (n * (n - 1.0));
-            Console.WriteLine(shagprogressi_D.ToString());
-            Console.WriteLine(aN.ToString());
+            int n;
+            Console.WriteLine("Введите интересующий член прогрессии");
+            if (Int32.TryParse(Console.ReadLine(), out n));
+            double aN = 2.0 * sum / n - a0;
+            double shagprogressi_D = (2.0 * sum - 2.0 * a0 * n) / (n * (n - 1.0));
+            Console.WriteLine($"d = {shagprogressi_D}, aN = {aN}");
             #endregion
         }
     }
