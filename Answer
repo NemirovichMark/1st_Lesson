@@ -1,0 +1,12 @@
+using System;
+
+namespace _1st_Lesson
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {            
+            
+        }
+    }
+}
