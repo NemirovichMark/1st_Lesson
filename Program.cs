@@ -1,21 +1,9 @@
 using System;
-using System.Collections.Generic;
-using static System.Console;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Configuration;
-
-namespace HomeWork1
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            #region Ex1
-            double weight = 70.0;
-            double height = 180.0;
-            if (height != 0)
             {
                 double bmi = (weight / (height * height)) * 10000;
                 WriteLine($"Body mass index is {bmi}");
