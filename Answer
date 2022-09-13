@@ -1,0 +1,24 @@
+# region
+double weight = 57.0;
+double higt = 175.0;
+double BMI = (weight / (higt * higt));
+Console.WriteLine($"Body mass index is {BMI}");
+#endregion
+
+#region
+const double a = 100 % 17;
+const double b = 18 - (a / 17);
+int grad = 10 * 17;
+double P = (4 * (Math.PI * a * b + (a - b)) / (a + b));
+double Length = P / 360 * grad;
+Console.WriteLine($"The length of the ellipse sector curve is {Length}");
+#endregion
+
+#region
+const int a0 = 17;
+const int S = 10309;
+int n = Convert.ToInt32(Console.ReadLine());
+double Step = (2 * (S - n * a0)) / n * (n - 1);
+double Nth = 2 * S / n - a0;
+Console.WriteLine($"the step of an Arithmetic Sequence is {Step} , Nth term of an Arithmetic Sequence is {Nth}  ");
+#endregion
