@@ -15,8 +15,11 @@ namespace HomeWork1
             #region Ex1
             double weight = 70.0;
             double height = 180.0;
-            double bmi = (weight / (height * height)) * 10000;
-            WriteLine($"Body mass index is {bmi}");
+            if (height != 0)
+            {
+                double bmi = (weight / (height * height)) * 10000;
+                WriteLine($"Body mass index is {bmi}");
+            }
             #endregion
 
             #region Ex2
@@ -32,11 +35,17 @@ namespace HomeWork1
             double a0 = 4;
             double S = 11907;
             WriteLine("Введите член прогрессии");
-            int n = int.Parse(ReadLine());
-            double step_d = (2.0 * S - 2.0 * a0 * n) / (n * (n - 1.0));
-            double term = 2 * S / n - a0;
-            WriteLine($"the step of an Arithmetic Sequence is {step_d} , nth term of an Arithmetic Sequence is {term}"); 
+            uint n = uint.Parse(ReadLine());
+            if ((n > 1) && (n != 4))
+            {
+                double step_d = (2.0 * S - 2.0 * a0 * n) / (n * (n - 1.0));
+                double term = 2 * S / n - a0;
+                WriteLine($"the step of an Arithmetic Sequence is {step_d} , nth term of an Arithmetic Sequence is {term}");
+            }
+            
             #endregion
         }
     }
 }
+
+
