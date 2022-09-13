@@ -26,11 +26,18 @@ namespace Homework
             #region 3
             int a0 = 11;
             int S = 10106;
-            int n = int.Parse(Console.ReadLine());
-            int an = S / n * 2 - a0;
-            double d = (an - a0) / n;
-            Console.WriteLine("answer for 3 task");
-            Console.WriteLine(d);
+            double n = int.Parse(Console.ReadLine());
+            if (n > 0) 
+            { 
+                double an = S / n * 2 - a0;
+                double d = (an - a0) / n;
+                Console.WriteLine("answer for 3 task");
+                Console.WriteLine(d);
+            }
+            else
+            {
+                Console.WriteLine("n<=0");
+            }
             #endregion
         }
     }
