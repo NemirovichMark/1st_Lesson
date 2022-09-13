@@ -6,46 +6,42 @@ namespace Homework12_sep
     {
         static void Main(string[] args)
         {
-            #region Task 1
-
-                double weight, long_;
-                Console.WriteLine("Введите вес:");
-                weight = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Введите рост:");
-                long_ = Convert.ToDouble(Console.ReadLine()) * 0.01;
-                double BIM = weight / Math.Pow(long_, 2);
-                BIM = Math.Round(BIM, 2);
-                Console.WriteLine("Индекс тела: " + BIM);
-
+            #region task 1
+            double body_weigh = 83.8;
+            double lenght_body = 1.83;
+            double BMI = body_weigh / (lenght_body * 1.83);
+            Console.WriteLine("Индект ИМТ моего тела " + BMI);
             #endregion
 
-            #region Task 2
+            #region task 2
+            Console.WriteLine("Мой номер в группе - 24");
+            int nomer_group = 24;
+            double dlina_a = 100 % nomer_group;
+            Console.WriteLine("Мой возраст - 18 лет");
+            int age = 18;
+            double dlina_b = age - (dlina_a / 24);
+            double gradusi = 10 * nomer_group / 180;
+            double dlina_sectora = 3.14 * (dlina_a + dlina_b) * Math.Sin(gradusi);
+            Console.WriteLine("Ура,длина сектора " + dlina_sectora + "!");
+            Console.ReadLine();
+            #endregion
+           
+                
+                
+             #region task 3
 
-                int a = 100 % 9;
-                int b = 18 - (a / 9);
-                int grad = 10 * 9;
-                double perimeter = 2 * Math.Sqrt((Math.Pow(a, 2) + Math.Pow(b, 2)) / 2) * Math.PI;
-                double lenght = grad * perimeter / 360;
-                Console.WriteLine("Длинна сектора: " + Math.Round(lenght, 2));
-
+            Console.WriteLine("Моя дата рождения - 12.11.2003");
+            int S = 1211;
+            Console.WriteLine("Мой номер в группе - 24");
+            int a0 = 24;
+            Console.WriteLine("Введите кол-во членов арифмитической последовательности");
+            int n = Int32.Parse(Console.ReadLine());
+            double d = ((2 * S / n) - 2 * a0) / (n - 1);
+            Console.WriteLine("Разница между двумя членами последовательности равняется " + d + "!");
+            Console.ReadLine();
             #endregion
 
-            #region Task 3
-
-                int S = 11804;
-                int a0 = 9;
-                Console.WriteLine("Введите номер члена прогрессии:");
-                int n = Convert.ToInt32(Console.ReadLine());
-
-                if n != 0:{
-                    double aN = 2 * S / n - a0;
-                }
-
-                double d = (aN - a0) / (n - 1);
-                Console.WriteLine("Член прогрессии: " + aN);
-                Console.WriteLine("Шаг прогрессии: " + d);
-
-            #endregion
+               
         }
     }
 }
