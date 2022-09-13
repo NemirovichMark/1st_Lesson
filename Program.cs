@@ -167,6 +167,44 @@ namespace _1st_Lesson
                 Console.WriteLine($"The f({x}) = {y}");
             }
             #endregion
+                #region Task_1
+            double weight = 65;
+            double height = 190;
+            if (height <= 0)
+            {
+                Console.WriteLine("wrong value");
+            }
+            else { 
+                double BMI = weight / Math.Pow(height, 2);
+                Console.WriteLine(BMI);
+            }
+            #endregion
+
+            #region Task_2 
+            double a = 100 % 19;
+            double b = 18 - (a / 19);
+            double grad = 10 * 19;
+            double ellipse = Math.PI * (a + b) * Math.Sin(grad * Math.PI / 180);
+            Console.WriteLine(ellipse);
+            #endregion
+
+            #region Task_3
+            int a0 = 19;
+            int S = 12206;
+            Console.WriteLine("Enter value(n):");
+            if (Int32.TryParse(Console.ReadLine(), out int n)) { 
+            if (n != 0) {
+                double an = S * 2 / n - a0;
+                double step = (an - a0) / n;
+                Console.WriteLine(step);
+            }
+            else {
+                Console.WriteLine("wrong value");
+            }
+            } else {
+                Console.WriteLine("wrong input");
+            }
+            #endregion
 
             /* Tasks:
              * 1. Find your BMI - body mass index
