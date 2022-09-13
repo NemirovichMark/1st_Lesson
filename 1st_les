@@ -9,7 +9,7 @@ namespace _1st_Lesson
             // 1
             
             float mass = 65;
-            float lenght = 0;
+            float lenght = 189;
             float bmi;
             if (lenght != 0){
                 bmi = mass / (lenght * lenght);
