@@ -8,7 +8,7 @@ Int32.TryParse(Console.ReadLine(), out Weight);
 Console.Write("Enter your height: ");
 int Height;
 Int32.TryParse(Console.ReadLine(), out Height);
-double BMI = (Weight / (Height * Height));
+if(Height != 0 && Weight != 0) double BMI = (Weight / (Height * Height));
 Console.WriteLine($"Your BMI: {BMI}");
 #endregion
 
