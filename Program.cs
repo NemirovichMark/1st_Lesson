@@ -1,185 +1,83 @@
 using System;
-
-namespace _1st_Lesson
+namespace Homework_1
 {
-    class Program
+    class Main_Prog
     {
+
+
+        static void Telling_Ur_BMI(float height, float weight)
+            {
+                float BMI;
+                try
+                {
+                    BMI = weight/(height*height);
+                    Console.WriteLine($"Your BMI is {BMI}!");
+                }
+                catch
+                {
+                    Console.WriteLine("Please, enter your real parameters");
+                }
+            }
+
+
+
+        static void Calculating_Step_And_Nth_Elem(int A_0, int Sum_Of_Sequence, int Number_Of_Elems)
+            {
+                float Step;
+                float Nth;
+                try
+                {
+                    Step = ((2 * Sum_Of_Sequence / Number_Of_Elems) - 2 * A_0)/(Number_Of_Elems - 1);
+                    Nth = A_0 + Step*(Number_Of_Elems-1);
+                    Console.WriteLine($"Step = {Step}, Nth = {Nth}");
+                }
+                catch
+                {
+                    Console.WriteLine("Please, enter real parameters");
+                }
+            }
+
+
+   
         static void Main(string[] args)
         {
-            #region Integers
-            int a, b = 5;
-            int c;
-            int d = 10;
-
-            // just for info
-            short smallIntegers = Int16.MaxValue;
-            long outstretchedInteger = Int64.MinValue;
-            uint notNegativeIntegers = 5;   // not negative
-            byte FF = 255;                  // not sigative
-            sbyte ff = -127;                // signed (+-) byte
-
-
-            a = (b / 5) + d%4 - 2; // при делении целых чисел всегда округляется вниз
-            c = -123546;
-
-            // Используйте интерполированные строки ($) для вывода и будет вам счастье
-            Console.WriteLine($"Integers: a={a}, b={b}, c={c}, d={d}");
+            #region First_Task
+            //Я не совсем понял, что от меня требуется, поэтому написал маленький статичный метод, вычисляющий индекс массы тела.
+            float weight = 78.0;
+            float height = 1.78;
+            Telling_Ur_BMI(height, weight);
             #endregion
 
-            #region Doubles
-            double aa, bb = 5.0;
-            double cc;
-            double dd = 12.251;
 
-            float f = 123.4f;
-            decimal m = 123.4m;
 
-            aa = (bb / 5) + dd % 4 - 2; // тут проблем с округлением не будет
-            cc = b / 5.0; // важно, чтобы 1 из чисел было дробным, тогда будет довольно точный расчет
-            
-            Console.WriteLine($"Doubles: aa={aa}, bb={bb}, cc={cc}, dd={dd}");
-            #endregion
-
-            #region Strings
-            string s = "", str = string.Empty; // 2 пустые строки
-            string name = "Vasya";
-            string famile = "P" + "u" + "p" + "kin"; // не делайте так! Тут строка пересоздается 4 раза.
-
-            Console.WriteLine(name + " " + famile + " cool guy =)");
-            #endregion
-
-            #region Chars
-            char letter = 'a';
-            char digit = '0';
-            char symbol = '+';
-
-            Console.WriteLine($"Zero is " + digit); 
-            // тут идет преобразование символа в строку, так как строка - это набор символов
-            #endregion
- 
-                
-            #region Booleans
-            bool t = true, f;
-            f = false;
-            t = 5 > 2;
-            t = (1 == 0) || ((1 > 0) && true);
-            f = !t;
-
-            Console.WriteLine($"True is {t,10}. false is {f,-10}"); 
-            #endregion
-
-            Console.WriteLine($"Zero is " + digit); 
-            // тут идет преобразование символа в строку, так как строка - это набор символов
-            #endregion
-
-            #region Casting and type conversion
-            #region Implicit Conversions
-            aa = a;
-            b = 5;
-            bb = 5;
-            #endregion
-
-            #region Explicit conversions (casts)
-            //a = aa;
-            a = (int)aa; // Cast double to int. Приведение дробного к целому.
-            bb = (double)b; // Нет смысла из подмножества приводить к множеству double > int
-            #endregion
-
-            #region Сonversions by methods
-            s = a.ToString();
-            str = aa.ToString();
-
-            a = Int32.Parse("123");
-           // bb = Double.Parse("Hey, are you ready to errors?");
-            #endregion
-
-            // Полная таблица явных и неявных преобразований, если заинтересовало (будет полезно):
-            // https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/numeric-conversions
-            #endregion
-
-            #region TryCatchFinally
-            // How to avoid errors?
-            int divizionByZero = 50;
+            #region Second_Task
+            int Number_In_Group = 17; //Пусть будет 17, т.к. я не знаю свой номер в группе
+            int Age = 18;
             try
             {
-                // this block have to be
-                a = 0; 
-                divizionByZero = divizionByZero / a;
+                float First_Half_Axis = Number_In_Group;
+                float Second_Half_Axis = Age - (First_Half_Axis / Number_In_Group);
+                float Grade = 10 * Number_In_Group;
+                float PI = 3.1415926535f;
+                float Len_Of_Ellipse_Sector_Curve = (Grade/360) * PI * (First_Half_Axis + Second_Half_Axis);
+                Console.WriteLine($"Length of the ellipse sector curve is {Len_Of_Ellipse_Sector_Curve}!");
             }
             catch
             {
-                //throw new DivideByZeroException();
-            }
-            finally
-            {
-                Console.WriteLine("Would a == 0 or not, this block would work");
-                Console.WriteLine(divizionByZero);
-            }
-
-            #region TryMethods
-            if (Int32.TryParse(str, out int numberFromString))
-            {
-                divizionByZero /= numberFromString;
+                Console.WriteLine("Please, enter your real parameters");
             }
             #endregion
 
+
+
+            #region Third_Task
+            //Не совсем понимаю, как можно найти шаг и n-ый элемент не зная количество элементов,
+            //поэтому написал метод, который в зависимости от n находит эти значения
+            int A_0 = 17;
+            int Sum_Of_Sequence = 11704;
+            int Number_Of_Elems = Int32.Parse(Console.ReadLine());; //Введите сюда нужное количество элементов арифмитической последовательности
+            Calculating_Step_And_Nth_Elem(A_0, Sum_Of_Sequence, Number_Of_Elems);
             #endregion
-
-            #region Math class
-            a = (int)Math.Pow(5, 2);
-            bb = Math.Sin(aa); // Угол, измеряемый в радианах.
-            c = Math.Abs(c);
-            #endregion
-
-            #region First example
-            // Find the roots of the equation
-
-            // 3.2x + 8.7x^2 = 17.9 
-
-            aa = 8.7;
-            bb = 3.2;
-            cc = -17.9;
-
-            double discriminant = Math.Pow(bb, 2) - 4 * aa * cc;
-            try
-            {
-                double x1 = (-bb + Math.Sqrt(discriminant)) / 2 * aa;
-                double x2 = (-bb - Math.Sqrt(discriminant)) / 2 * aa;
-
-                Console.WriteLine($"Roots of the eqution are: {x1, 5} and {x2, 5}");
-            }
-            catch
-            {
-                Console.WriteLine("There is no rational roots");
-            }
-            #endregion
-
-            #region Second example
-            // Find the value of f(x) when x is...
-            // f(x) = 25.3x + lg(4|x|+50) - exp^(x/100)
-            Console.WriteLine("Type the integer x");
-            if(Int32.TryParse(Console.ReadLine(), out int x))
-            { 
-                aa = 25.3 * x;
-                bb = Math.Log10(4 * Math.Abs(x) + 50);
-                cc = Math.Exp(x / 100);
-                var y = aa + bb - cc; // var используйте, когда справа написан тип или вам подойдет любой принимаемый тип
-                Console.WriteLine($"The f({x}) = {y}");
-            }
-            #endregion
-
-            /* Tasks:
-             * 1. Find your BMI - body mass index
-             * 
-             * 2. Find the length of the ellipse sector curve with:
-             *  a = 100 % (№ in the group)
-             *  b = age - (a / № in the group)
-             *  grad = 10 * (№ in the group)
-             * 
-             * 3. Find the step (d) and nth term of an Arithmetic Sequence when:
-             *  a0 = (№ in the group)
-             *  S = 1ddmm of your birth day
-             */
         }
     }
 }
