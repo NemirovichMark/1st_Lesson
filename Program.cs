@@ -7,14 +7,16 @@ namespace _1st
         static void Main()
         {
             #region task 1
-            Console.WriteLine("Введите ваш рост в сантиметрах/enter your height in cm");
-            decimal rost = Decimal.Parse(Console.ReadLine());
-            rost = rost / 100;
-            Console.WriteLine("Введите ваш вес в килограммах/enter your weight in kg");
-            decimal ves = Decimal.Parse(Console.ReadLine());
-            Console.WriteLine("Ваш Индекс массы тела/your body mass index");
-            decimal imt = ves / (rost * rost);
-            Console.WriteLine(imt.ToString("N5"));
+                double height;
+                double weight;
+            Console.WriteLine("Введите ваш рост в метрах");
+            if (Double.TryParse(Console.ReadLine(), out height) && height>0) {
+                Console.WriteLine("Введите ваш вес в килограммах/enter your weight in kg");
+                if (Double.TryParse(Console.ReadLine(), out weight) && weight>0) {
+                    Console.WriteLine("Ваш Индекс массы тела/your body mass index");
+                    Console.WriteLine(weight/(height*height));
+                }
+            }
             #endregion
       
             #region task 2
