@@ -6,7 +6,10 @@ namespace Homework
     {
         static void Main(string[] args)
         {
-
+            #region 1 
+            Console.WriteLine("answer for 1 task");
+            double BMI = 73 / (1.75 * 1.75);
+            Console.WriteLine($"My BMI is {BMI}");
             #endregion
 
 
@@ -29,8 +32,6 @@ namespace Homework
             Console.WriteLine("answer for 3 task");
             Console.WriteLine(d);
             #endregion
-
         }
     }
 }
-
