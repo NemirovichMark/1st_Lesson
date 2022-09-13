@@ -6,11 +6,6 @@ namespace _1st
     {
         static void Main()
         {
-            #region task 1
-            double height;
-            double weight;
-            Console.WriteLine("Введите ваш рост в метрах");
-            if (Double.TryParse(Console.ReadLine(), out height) && height > 0)
             {
                 Console.WriteLine("Введите ваш вес в килограммах/enter your weight in kg");
                 if (Double.TryParse(Console.ReadLine(), out weight) && weight > 0)
