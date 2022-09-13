@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _1st_Lesson
 {
@@ -7,12 +7,6 @@ namespace _1st_Lesson
         static void Main(string[] args)
         {
             
-            #region 1st_pr
-            Console.WriteLine("Enter your weight:");
-            double weight = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter your height:");
-            int height = Convert.ToInt32(Console.ReadLine());
-            if (weight != 0 & height != 0)
             {
                 double BIM = Math.Round(weight / Math.Pow(height, 2) * 10000, 1);
 
@@ -81,6 +75,7 @@ namespace _1st_Lesson
                 Console.WriteLine("Please, enter values (a0 and n) not null");
             }
             #endregion
+
 
         }
     }
