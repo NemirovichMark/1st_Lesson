@@ -1,51 +1,34 @@
-using System;
+﻿#region task 1
+double weigh = 68.6;
+double lenght = 1.89;
+double BMI = weigh / (lenght * lenght);
+Console.WriteLine("Мой ИМТ составояет " + BMI);
+#endregion 
 
-namespace Homework12_sep
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            #region Task 1
+#region task 2
+double a = 100%1;
+double b = 17 - (a/1) ;
+double grad =( 3.14 * (10 * 1))/180 ;
+double L=3.14 * (a+b) * Math.Sin(grad) ;
+Console.WriteLine("Длина сектора " + L);
+#endregion 
 
-                double weight, long_;
-                Console.WriteLine("Введите вес:");
-                weight = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Введите рост:");
-                long_ = Convert.ToDouble(Console.ReadLine()) * 0.01;
-                double BIM = weight / Math.Pow(long_, 2);
-                BIM = Math.Round(BIM, 2);
-                Console.WriteLine("Индекс тела: " + BIM);
+#region task 3
+double a0 = 1;
+double s = 10201;
+Console.WriteLine("Введите количество n-ных членов ");
+int n=Convert.ToInt32(Console.ReadLine());
+double an = (2 * s) / n - a0;
+double d = (((2 * s) / n) - 2 * a0) / (n - 1);
+Console.WriteLine("Разница между членами последовательности " + d);
+#endregion
 
-            #endregion
 
-            #region Task 2
 
-                int a = 100 % 9;
-                int b = 18 - (a / 9);
-                int grad = 10 * 9;
-                double perimeter = 2 * Math.Sqrt((Math.Pow(a, 2) + Math.Pow(b, 2)) / 2) * Math.PI;
-                double lenght = grad * perimeter / 360;
-                Console.WriteLine("Длинна сектора: " + Math.Round(lenght, 2));
 
-            #endregion
 
-            #region Task 3
 
-                int S = 11804;
-                int a0 = 9;
-                Console.WriteLine("Введите номер члена прогрессии:");
-                int n = Convert.ToInt32(Console.ReadLine());
 
-                if n != 0:{
-                    double aN = 2 * S / n - a0;
-                }
 
-                double d = (aN - a0) / (n - 1);
-                Console.WriteLine("Член прогрессии: " + aN);
-                Console.WriteLine("Шаг прогрессии: " + d);
 
-            #endregion
-        }
-    }
-}
+
