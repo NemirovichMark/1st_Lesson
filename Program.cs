@@ -46,7 +46,6 @@ namespace Homework12_sep
                 Console.WriteLine("Шаг прогрессии: " + d);
 
             #endregion
-
         }
     }
 }
