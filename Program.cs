@@ -193,7 +193,7 @@ namespace _1st_Lesson
             int S = 12206;
             Console.WriteLine("Enter value(n):");
             if (Int32.TryParse(Console.ReadLine(), out int n)) { 
-            if ((n != 0) && (n - a0 != 0)) { 
+            if (n != 0) {
                 double an = S * 2 / n - a0;
                 double step = (an - a0) / n;
                 Console.WriteLine(step);
