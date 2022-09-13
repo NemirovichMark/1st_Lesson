@@ -183,3 +183,52 @@ namespace _1st_Lesson
         }
     }
 }
+using System;
+namespace FirstHW
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            #region Task №1
+            double weight = 70.0;
+            double height = 1.9;
+            double BMI;
+            if (height <= 0)
+            {
+                Console.WriteLine("Why you`re so short? Wrong");
+            }
+            else
+            {
+                BMI = weight / (height * height);
+                Console.WriteLine($"Your BMI is {BMI}");
+
+            }
+            #endregion
+            #region Task №2
+            double aa = 100 % 26;
+            double bb = 18 - (aa / 26);
+            double grad = 10 * 26;
+
+            grad = Math.PI * grad / 180.0;
+            double length;
+            length = Math.Sqrt((Math.Pow(aa, 2) * Math.Pow(bb, 2)) / (Math.Pow(aa, 2) * Math.Pow(Math.Sin(grad), 2) + (Math.Pow(bb, 2) * Math.Pow(Math.Cos(grad), 2))));
+            Console.WriteLine($"The lenght is {length}");
+            #endregion
+            #region Task №3
+            int a0 = 26;
+            int S = 11408;
+            int n = Int32.Parse(Console.ReadLine());
+            if (n <= 1)
+            {
+                Console.WriteLine($"the sequence element cannot be negative or null");
+                return;
+            }
+            double d = (2 * ((S / n) - a0)) / (n - 1);
+            double an = a0 + d * (n - 1);
+            Console.WriteLine($" The step is {d} and the element is {an}");
+
+
+
+
+            #endregion
