@@ -168,6 +168,38 @@ namespace _1st_Lesson
             }
             #endregion
 
+            #region Task1
+            double weight = 75.0, height = 1.85;
+            double bmi = weight / (height * height);
+            Console.WriteLine(bmi);
+            #endregion
+
+            #region Task2
+            int seq = 13, age = 17;
+            int a = 100 % seq;
+            double b = age - (a / seq);
+            int grad = 10 * seq;
+            double p = Math.PI * (double)(a + b) * Math.Sin((Math.PI / 180) * grad);
+            Console.WriteLine(p);
+            #endregion
+
+            #region Task3
+            int seq = 13;
+            int a0 = seq;
+            int s = 11511;
+            Console.WriteLine("Enter n:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            if (n > 0) {
+                double an = (2 * s) / n - a0;
+                double d = (an - a0) / n;
+                Console.WriteLine(d);
+                Console.WriteLine(an);
+            }
+            else {
+                Console.WriteLine("Incorrect value (n)...");
+            }
+            #endregion
+                
             /* Tasks:
              * 1. Find your BMI - body mass index
              * 
@@ -180,6 +212,7 @@ namespace _1st_Lesson
              *  a0 = (№ in the group)
              *  S = 1ddmm of your birth day
              */
+              
         }
     }
 }
