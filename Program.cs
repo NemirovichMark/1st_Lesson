@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 
 class proga
 {
@@ -6,6 +7,15 @@ class proga
     {
         #region 1st
 
+        Console.WriteLine("Eneter your hight (meters)");
+        double height = Convert.ToDouble(Console.ReadLine());
+        while (height <= 0)
+        {
+            Console.WriteLine("error, please enter value > 0");
+            height = Convert.ToDouble(Console.ReadLine());
+        }
+        Console.WriteLine("Enter your weight in kg.");
+        double weight = Convert.ToDouble(Console.ReadLine());
 
         double bmi;
 
@@ -27,7 +37,6 @@ class proga
 
 
         #region 3rd proga
-
 
         const int a0 = 6, S = 12904;
         double n = Convert.ToDouble(Console.ReadLine());
