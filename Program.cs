@@ -189,9 +189,15 @@ namespace _1st_Lesson
             int s = 11511;
             Console.WriteLine("Enter n:");
             int n = Convert.ToInt32(Console.ReadLine());
-            double an = (2 * s) / n - a0;
-            double d = (an - a0) / n;
-            Console.WriteLine(d);
+            if (n > 0) {
+                double an = (2 * s) / n - a0;
+                double d = (an - a0) / n;
+                Console.WriteLine(d);
+                Console.WriteLine(an);
+            }
+            else {
+                Console.WriteLine("Incorrect value (n)...");
+            }
             #endregion
                 
             /* Tasks:
