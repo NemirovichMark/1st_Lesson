@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace Lab_0
 {
@@ -9,6 +9,11 @@ namespace Lab_0
             #region Task_1
             int mass = 65;
             double hight = 1.8;
+            if (hight <= 0)
+            {
+                Console.WriteLine("Incorrect hight");
+                return;
+            }
             int BMI = Convert.ToInt32(mass / (hight * hight));
             Console.WriteLine($"Task 1 \nYour BMI body mass index: {BMI}");
             #endregion 
@@ -25,14 +30,20 @@ namespace Lab_0
             #region Task_3
             double a0 = 14;
             double S = 11103;
+            Console.WriteLine("Task 3");
             if (!int.TryParse(Console.ReadLine(), out int n))
+            {
+                Console.WriteLine("Input is't correct!");
+                return;
+            }
+            if (n <= 1)
             {
                 Console.WriteLine("Input is't correct!");
                 return;
             }
             double an = (S / n) * 2 - a0;
             double step = (an - a0) / (n - 1);
-            Console.WriteLine($"Task 3 \nLast element: {an} \nStep of an Arithmetic Sequence: {step}");
+            Console.WriteLine($"Last element: {an} \nStep of an Arithmetic Sequence: {step}");
             #endregion
         }
     }
