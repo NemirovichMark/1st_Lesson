@@ -10,6 +10,12 @@ namespace _1st_Lesson
 
             const double weight = 65;
             const double height = 1.76;
+            while (height<=0)
+                {
+                Console.WriteLine("height cannot be negative or zero");
+                break;
+
+                }
             double BMI = weight / Math.Pow(height, 2);
             Console.WriteLine($"BMI = {BMI}");
 
@@ -33,9 +39,14 @@ namespace _1st_Lesson
             #region task 0.3
 
             const double aO = 4;
-            const double S = 11111.0;
+            const double S = 11111.0; //не шутка
             double n;
             double.TryParse(Console.ReadLine(), out n);
+            while (n<=1)
+                {
+                Console.WriteLine("n cannot be negative or zero or just one");
+                double.TryParse(Console.ReadLine(), out n);
+                }
             double nth = S * 2 / n - aO;
             double d = (nth - aO) / (n - 1);
             Console.WriteLine($"nth elem = {nth}");
