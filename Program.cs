@@ -1,4 +1,6 @@
 using System;
+using System.Reflection;
+
 namespace _1st_Lesson
 {
     class Program
@@ -31,24 +33,20 @@ namespace _1st_Lesson
                 {
                     Console.WriteLine("    Something wrong with given weight...");
                 }
-                if (currentWeight <= 0  &&  currentWeight <= 300)
+                if (currentWeight <= 0  ||  currentWeight >= 300)
                 {
-                    Console.WriteLine("    Weight have to be greater than 0 and smaller than 300kg. Try again...");
+                    Console.WriteLine("    Given data is incorrect. Try again...");
                     continue;
                 }
-                break;
-            }
             
-            while (true)
-            {
                 Console.Write("    Enter your height (centimeter): ");
                 if (!int.TryParse(Console.ReadLine(), out currentHeight))
                 {
                     Console.WriteLine("    Something wrong with given height...");
                 }
-                if (currentHeight <= 0 && currentHeight <= 270)
+                if (currentHeight <= 0 || currentHeight >= 270)
                 {
-                    Console.WriteLine("    Height have to be greater than 0 and smaller than 270cm. Try again...");
+                    Console.WriteLine("    Given data is incorrect. Try again...");
                     continue;
                 }
                 break;
@@ -71,12 +69,18 @@ namespace _1st_Lesson
              * grad = 10 * (№ in the group)
             */
             Console.WriteLine("Task #2");
-            double a = 100 % 17;
-            double b = 17 - (a / 17);
-            double grad = 10 * 17;
+            /*
+             * My number in the excel file of the group from your repo is 2,
+             * so number = 2
+             */
+            int number = 2;
+            int age = 17;
+            double a = 100 % number;
+            double b = age - (a / number);
+            double grad = 10 * number;
 
             //double sectorLength = (a + b) * Math.PI * (degree / 360);
-            Console.WriteLine($"    answer: {Math.Round((a + b) * Math.PI * (grad / 360), 2)}");
+            Console.WriteLine($"    answer: {Math.Round((a + b) * Math.PI * Math.Sin(grad / 360), 2)}");
 
             #endregion
 
@@ -87,7 +91,11 @@ namespace _1st_Lesson
              * S = 1ddmm of your birth day
              */
             Console.WriteLine("Task #3");
-            int first_elem = 17;
+            /*
+             * My number in the excel file of the group from your repo is 2,
+             * so first_elem = 2
+             */
+            int first_elem = 2;
             int s = 13009;
             int cnt;
             while (true)
@@ -96,13 +104,20 @@ namespace _1st_Lesson
                 if (!int.TryParse(Console.ReadLine(), out cnt))
                 {
                     Console.WriteLine("    Something wrong with given data...");
+                }
+                if (cnt <= 0)
+                {
+                    Console.WriteLine("    Given data is incorrect. Try again...");
                     continue;
                 }
                 break;
             }
+            
             int last_elem = (s / cnt) * 2 - first_elem;
             double step = (last_elem - first_elem) / cnt;
+
             Console.WriteLine($"   Last element: {last_elem}\n    Step: {step}");
+            
             #endregion
         }
     }
