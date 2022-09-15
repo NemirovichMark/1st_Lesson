@@ -1,4 +1,3 @@
-
 using System;
 using System.Dynamic;
 using System.Linq.Expressions;
@@ -28,58 +27,49 @@ namespace _1st_Lesson
              */
             //TASKS
             #region task_1
-            m1:
+            Console.WriteLine("your weight and then your height(kilo,centmetr):");
+            /* first i parse to uint and then convert to double in order to protect 
+              my program from negative input
+            */
             try
             {
-                Console.WriteLine("your weight(kilo, you have to use comma):");
-                double mass = double.Parse(Console.ReadLine());
-                Console.WriteLine("your height(meter, you have to use comma) :");
-                double height = double.Parse(Console.ReadLine());
-                if (mass <= 0 || height <= 0)
-                {
-                    throw new Exception();
-                }
-                double result = mass / (height * height);
+                double mass = (double) uint.Parse(Console.ReadLine());
+                double height = (double) uint.Parse(Console.ReadLine());
+                double result = mass / (height/100 * height/100);
                 Console.WriteLine($"your weight: {mass}\nyour height: {height}\nyour BMI: {result}" + "\n\n\n\n\n\n");
             }
-            catch
+            
+            catch (Exception ex)
             {
-                Console.WriteLine("you made sonething wrong, try again.");
-                goto m1;
+                Console.WriteLine($"you made something wrong.{ex}");
             }
-            #endregion
-            #region task_2
-            // Here I did without input Just for a change
+               
+            
+                #endregion
+            #region task_2            
             double a = 3.57;
             double b = 16.87;
             int grad = 280;
             double resultt = 3.14 * (a + b) / 360 * grad;
             Console.WriteLine($"the length of the ellipse sector curve: {resultt}\na = {a}\nb = {b}\ngrad = {grad}");
             #endregion
-            #region task_3
-            /* I understand that the sequence is finite and
-               I have to enter the number of members myself
-            */
+            #region task_3            
             double a0 = 28;
             double s = 12411;
-            m2:
-            try
+            Console.WriteLine("quality: ");  
+            // I use uint to protect program from negative input
+            try 
             {
-                Console.WriteLine("quality: ");
-                int quality = int.Parse(Console.ReadLine());
-                if (quality <= 0)
-                {
-                    throw new Exception();
-                }
+                uint quality = uint.Parse(Console.ReadLine());               
                 double d = (2 * s / quality - 2 * a0) / (quality - 1);
-                double nth_term = a0 + (quality - 1) * d;
+                double nth_term = a0 + (quality - 1) * d;                
                 Console.WriteLine($"d = {d}\nnth_term = {nth_term}");
-
             }
-            catch
+            catch (Exception ex)
             {
-                Console.WriteLine("you made sonething wrong, try again.");
-                goto m2;
-            }
-            
+                Console.WriteLine($"you made something wrong.{ex}");
+            }            
             #endregion
+        }
+    }
+}
