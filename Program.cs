@@ -38,7 +38,8 @@ namespace Homework12_sep
             int n = Int32.Parse(Console.ReadLine());
             if (n > 0)
             {
-                double d = ((2 * S / n) - 2 * a0) / (n - 1);
+                double an = (2 * S) / n - a0;
+                double d = (an - a0);
                 Console.WriteLine("Разница между двумя членами последовательности равняется " + d + "!");
             }
             else
