@@ -36,8 +36,15 @@ namespace Homework12_sep
             int a0 = 24;
             Console.WriteLine("Введите кол-во членов арифмитической последовательности");
             int n = Int32.Parse(Console.ReadLine());
-            double d = ((2 * S / n) - 2 * a0) / (n - 1);
-            Console.WriteLine("Разница между двумя членами последовательности равняется " + d + "!");
+            if (n > 0)
+            {
+                double d = ((2 * S / n) - 2 * a0) / (n - 1);
+                Console.WriteLine("Разница между двумя членами последовательности равняется " + d + "!");
+            }
+            else
+            {
+                Console.WriteLine("Иди учить математику! ");
+            }
             Console.ReadLine();
             #endregion
 
