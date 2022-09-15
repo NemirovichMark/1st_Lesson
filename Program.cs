@@ -23,24 +23,13 @@ namespace _1st_Lesson
             double weigth = 0;
             double heigth = 0;
             
-            while (weigth <= 0)
+            while (weigth <= 0 && heigth <= 0)
             {
-                Console.Write("Input weigth in kg : ");
                 try
                 {
+                    Console.Write("Input weigth in kg : ");
                     weigth = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                }
-                catch (Exception)
-                {
-                    Console.WriteLine("Wrong input. Try again");
-                }
-            }
-
-            while (heigth <= 0)
-            {
-                Console.Write("Input heigth in meters : ");
-                try
-                {
+                    Console.Write("Input heigth in meters : ");
                     heigth = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 }
                 catch (Exception)
@@ -72,7 +61,7 @@ namespace _1st_Lesson
             double difference;
             Console.WriteLine($"first element: {firstElement}, sum : {sum}");
             Console.WriteLine($"Number of elements(>= 0) for 1, it turns out that {firstElement} == {sum}\nthe meaning is lost");
-            while (numberElements < 0 || numberElements == 1)
+            while (numberElements > 1)
             {
                 Console.Write("input number of elements: ");
                 int.TryParse(Console.ReadLine(), out numberElements);
