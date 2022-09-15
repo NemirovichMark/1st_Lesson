@@ -36,6 +36,7 @@ namespace _1st_Lesson
       {
        Console.WriteLine("n введён не правильно "); 
       }
+       Console.ReadLine();
       #endregion
     }
   }
