@@ -183,3 +183,19 @@ namespace _1st_Lesson
         }
     }
 }
+using System;
+
+namespace _1st_Lesson
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+             #region Doubles
+             double h = 1.65
+             const double v = 44
+             double hh = h*h
+             double i;
+             i = hh*v
+             Console.WriteLine($"i");
+            
