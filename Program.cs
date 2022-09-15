@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace _1st_Lesson
 {
@@ -8,72 +8,60 @@ namespace _1st_Lesson
         const int GROUPNUMBER = 17;
         const int AGE = 18;
 
+        static void OutputError(int n)
+        {
+            Console.WriteLine($"возникло иключение в регионе Exisise_{n}");
+        }
+
         static void Main(string[] args)
         {
             #region Exisise_1
-            try
+
+            double height = 1.77; // метры
+            double weight = 66; // килограмм
+            if (height == 0)
             {
-                double height = 1.77; // метры
-                double weight = 66; // килограмм
+                OutputError(1);
+            }
+            else
+            {
                 double BMI = weight / (height * height);
                 Console.WriteLine($"мой BMI приблизительно саставляет {BMI} кг/м*м при росте {height} м и массе {weight} кг");
-            }
-            catch
-            {
-                Console.WriteLine("возникло иключение в регионе Exisise_1");
-            }
-            finally
-            {
-
             }
             #endregion
 
             #region Exisise_2
-            try
-            {
-                double a = 100 % GROUPNUMBER; // первая полуось
-                double b = AGE - a / GROUPNUMBER; // вторая полуось
-                double grad = 10 * GROUPNUMBER; // угол
-                double ellipseLength = Math.PI * (a + b); // длина элипса
-                double ans = (grad / 360) * ellipseLength; //длина кривой сектора эллипса
-                Console.WriteLine($"длина кривой сектора эллипса {ans}");
-            }
-            catch
-            {
-                Console.WriteLine("возникло иключение в регионе Exisise_2");
-            }
-            finally
-            {
-
-            }
+            
+            double a = 100 % GROUPNUMBER; // первая полуось
+            double b = AGE - a / GROUPNUMBER; // вторая полуось
+            double grad = 10 * GROUPNUMBER; // угол
+            double ellipseLength = Math.PI * (a + b); // длина элипса
+            double ans = (grad / 360) * ellipseLength; //длина кривой сектора эллипса
+            Console.WriteLine($"длина кривой сектора эллипса {ans}");
+            
             #endregion
 
             #region Exisise_3
-            try
+
+            int n;
+            string st;
+            Console.WriteLine("ведите значение n (n>1) иначе невозможно определить шаг арифметической прогрессии");
+            st = Console.ReadLine();
+            bool fl;
+            fl = int.TryParse(st, out n);
+            int s = 11407; // сума первых n элементов арифметической прогрессии
+            double a1 = GROUPNUMBER; // первый элемент в арифметической прогрессии
+            if (n <= 1 || n == a1 || !fl)
             {
-                int n;
-                string st;
-                Console.WriteLine("ведите значение n (n>1) иначе невозможно определить шаг арифметической прогрессии");
-                st = Console.ReadLine();
-                n = int.Parse(st);
-                if (n <= 1) 
-                {
-                    n = n / 0;
-                }
-                int s = 11407; // сума первых n элементов арифметической прогрессии
-                double a1 = GROUPNUMBER; // первый элемент в арифметической прогрессии
+                OutputError(3);
+            }
+            else
+            { 
                 double an = 2 * s / n - a1; // n-й элемент в арифметической прогрессии
                 double d = (an - a1) / (n - 1); // шаг арифметической прогрессии
                 Console.WriteLine($"шаг арифметической прогрессии {d}, n-й элемент в арифметической прогрессии {an}");
             }
-            catch
-            {
-                Console.WriteLine("возникло иключение в регионе Exisise_3");
-            }
-            finally
-            {
 
-            }
             #endregion
             /* Tasks:
              * 1. Find your BMI - body mass index
