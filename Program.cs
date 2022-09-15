@@ -34,7 +34,7 @@ namespace Homework12_sep
             int S = 1211;
             Console.WriteLine("Мой номер в группе - 24");
             int a0 = 24;
-            Console.WriteLine("Введите кол-во членов арифмитической последовательности");
+            Console.WriteLine("Введите количество членов арифмитической последовательности");
             int n = Int32.Parse(Console.ReadLine());
             if (n > 0)
             {
