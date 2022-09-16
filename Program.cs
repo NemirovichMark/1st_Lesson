@@ -28,11 +28,16 @@ namespace _1st_Lesson
         int a0 = 17;
          int s = 10612; 
         Console.WriteLine(" Введите n: ");
-        int n = Convert.ToInt32(Console.ReadLine () );     
+        int n = Convert.ToInt32(Console.ReadLine () );  
+            if (n>0){
             double a = (s * 2) / n - a0;
              double d = (a - a0) / n;
         Console.WriteLine(a);
          Console.WriteLine(d);
+            }
+            else Console.WriteLine("Введите другое n");
+                
+                
         #endregion
 
         }
