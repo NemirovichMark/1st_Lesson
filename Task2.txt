@@ -1,0 +1,15 @@
+
+
+using System;
+class HelloWorld {
+  static void Main() {
+    const double PI = 3.1415926535897931;
+    double a=100%2;
+    double b=18-(a/2);
+    double grad=10*2;
+    double rad=grad*0.0175;
+    double lenght;
+    lenght = PI * (a + b) * Math.Sin(rad);
+    Console.WriteLine(lenght);
+  }
+}
