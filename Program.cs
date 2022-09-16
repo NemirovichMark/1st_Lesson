@@ -6,7 +6,6 @@ namespace _1st_Lesson
         static void Main(string [] args)
         {
             #region Task_1
-
             double weight = 67.0;
              double height = 1.85;
               double bmi = weight / (height * height);
@@ -23,7 +22,18 @@ namespace _1st_Lesson
 
             Console.WriteLine((a + b) * P * (grad / 360));
             #endregion
-
+                 
+                
+            #region Task_3
+        int a0 = 17;
+         int s = 10612; 
+        Console.WriteLine(" Введите n: ");
+        int n = Convert.ToInt32(Console.ReadLine () );     
+            double a = (s * 2) / n - a0;
+             double d = (a - a0) / n;
+        Console.WriteLine(a);
+         Console.WriteLine(d);
+        #endregion
 
         }
 
