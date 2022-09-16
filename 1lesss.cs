@@ -26,10 +26,17 @@ namespace _1st_Lesson
                 int a0 = 10;
                 int S = 11501;
                 int n = Convert.ToInt32(Console.ReadLine());
-                double ad = 2 * S / n - a0;
-                double d = (ad - a0) / n;
-                Console.WriteLine(d);
-                Console.WriteLine(ad);
+                if ( n - a0 <= 0 )
+                {
+                    Console.WriteLine("invalid value of parameters");
+                }
+                else
+                {
+                    double ad = 2 * S / n - a0;
+                    double d = (ad - a0) / n;
+                    Console.WriteLine(d);
+                    Console.WriteLine(ad);
+                }
                 #endregion
 
 
