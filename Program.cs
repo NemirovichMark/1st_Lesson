@@ -36,7 +36,7 @@ namespace _1st_Lesson
             int a0 = 23;
             int S = 11905;
             int n = Int32.Parse(Console.ReadLine());
-            if (n > 0)
+            if (n > 1)
             {
                 double an = (S / n * 2) - a0;
                 double d = (S / n * 2 - 2 * a0) / (n - 1);
