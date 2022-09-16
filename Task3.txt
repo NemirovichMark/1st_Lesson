@@ -8,7 +8,7 @@ class HelloWorld {
     double S=12312; //Сумма элементов последовательностей до N(Включительно)
     double d; //Шаг
     double z;
-    if (N>0)
+    if (N>1)
     {
     d=(2*S/N-2*a0)/(N-1);
     z=a0+d*(N-1);
