@@ -16,10 +16,14 @@ namespace _1st_Lesson
             double an; // Н-ый член арифметической прогрессии
             string nst = Console.ReadLine(); // Количество членов в прогрессии
             int n = Convert.ToInt32(nst);
-            d = ((2 * s / n) - 2 * a0) / (n - 1);
-            an = a0 + d * (n - 1);
-            Console.WriteLine(d);
-            Console.WriteLine(an);
+		    if (n > 1)
+    		    {
+                d = ((2 * s / n) - 2 * a0) / (n - 1);
+                an = a0 + d * (n - 1);
+                Console.WriteLine(d);
+                Console.WriteLine(an);
+    		    }
+		    else  Console.WriteLine(0);
     }
     }
 }
