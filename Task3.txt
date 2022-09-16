@@ -1,0 +1,20 @@
+
+using System;
+class HelloWorld {
+  static void Main() {
+    string vvod = Console.ReadLine();
+    int N = Convert.ToInt32(vvod); //Количество членов прогрессии
+    double a0=2; // Первый Элемент
+    double S=12312; //Сумма элементов последовательностей до N(Включительно)
+    double d; //Шаг
+    double z;
+    if (N>1)
+    {
+    d=(2*S/N-2*a0)/(N-1);
+    z=a0+d*(N-1);
+    Console.WriteLine(d);
+    Console.WriteLine(z);
+    }
+    else Console.WriteLine("N must be greater than one!!!");
+  }
+}

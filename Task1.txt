@@ -1,0 +1,12 @@
+
+
+using System;
+class HelloWorld {
+  static void Main() {
+    double ves=84;
+    double rost=1.73;
+    double BMI;
+    BMI = ves / (rost * rost);
+    Console.WriteLine(BMI);
+  }
+}
