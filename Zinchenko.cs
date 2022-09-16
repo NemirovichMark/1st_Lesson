@@ -29,9 +29,23 @@ namespace Firsthomework
             Console.WriteLine("the third task: Find the step (d) and nth term of an Arithmetic Sequence:");
             Console.Write("n -> ");
             int n = Convert.ToInt32(Console.ReadLine());
-            int an = 2*s/n -a0;
-            int d = (an-a0)/(n-1);
-            Console.WriteLine($"d -> {d}, an-> {an}");
+            if (n <= 0)
+            { 
+                Console.WriteLine("please write another value");
+            }
+            else {
+                    if (n == 1)
+                    { 
+                        Console.WriteLine("an -> 8, d -> 0");
+                        
+                    }
+                    else 
+                    {
+                        int an = 2*s/n -a0;
+                        int d = (an-a0)/(n-1);
+                        Console.WriteLine($"d -> {d}, an-> {an}");
+                    }
+                }
         }
     }
 }
