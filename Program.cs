@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _1st_Lesson{
    public class Program
