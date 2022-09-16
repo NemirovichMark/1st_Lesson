@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+ 
+namespace _1st_Lesson
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double weight = 73.5; // Вес
+            double height = 1.83; // Рост
+            double BMI; // Индекс массы тела
+            BMI = weight / (height * height);
+            Console.WriteLine(BMI);
+        }
+    }
+}
