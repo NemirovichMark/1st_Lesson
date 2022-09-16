@@ -7,7 +7,7 @@ namespace _1st_Lesson{
       {
          Console.Clear();
 
-         Console.WriteLine("Задание №1:");
+         Console.WriteLine("№1:");
 
          double height = 0.0;
          double weight = 0.0;
@@ -15,76 +15,76 @@ namespace _1st_Lesson{
          first:
          try
          {
-            Console.WriteLine("Введите ваш рост в см");
+            Console.WriteLine("Enter your height (CM)");
             height = Convert.ToDouble(Console.ReadLine());
             if (height <= 0.0)
             {
-               Console.WriteLine("Вы ввели неккоректное значение");
+               Console.WriteLine("Error");
                goto first;
             }
          }
          catch
          {
-            Console.WriteLine("Вы ввели неккоректное значение");
+            Console.WriteLine("Error");
             goto first;
          }
 
          second:
          try
          {
-            Console.WriteLine("Введите ваш вес в кг");
+            Console.WriteLine("Enter your weight (KG)");
             weight = Convert.ToDouble(Console.ReadLine());
             if (weight <= 0.0)
             {
-               Console.WriteLine("Вы ввели неккоректное значение");
+               Console.WriteLine("Error");
                goto second;
             }
          }
          catch
          {
-            Console.WriteLine("Вы ввели неккоректное значение");
+            Console.WriteLine("Error");
             goto second;
          }
 
          double bmi = Math.Round(weight/((height/100)*(height/100)), 2);
-         Console.WriteLine($"Ваш BMI = {bmi}"); 
+         Console.WriteLine($"Your BMI = {bmi}"); 
          if (bmi < 18.5)
          {
-            Console.WriteLine("У вас недостаток веса ;(");
+            Console.WriteLine("Your BMI is low ;(");
          }
          else if (bmi >= 18.5 && bmi < 25)
          {
-            Console.WriteLine("У вас всё в порядке!!!");
+            Console.WriteLine("Your BMI is allright");
          }
          else
          {
-            Console.WriteLine("У вас лишний вес :(");
+            Console.WriteLine("Your BMI is big ;(");
          }
 
          Console.WriteLine("-----------------------");
-         Console.WriteLine("Задание №2:");
+         Console.WriteLine("№2:");
 
-         double a = 100 % 18;
-         double b = 17 - a / 18;
-         double grad = 10.0 * 18.0;
+         double a = 100 % 21;
+         double b = 17 - a / 21;
+         double grad = 10.0 * 21.0;
          double c = 4 * (Math.PI * a * b + ((a - b)*(a - b)) / (a + b));
-         Console.WriteLine($"Ответ = {c * grad / 360.0}");
+         Console.WriteLine($"Answer = {c * grad / 360.0}");
          
          Console.WriteLine("-----------------------");
-         Console.WriteLine("Задание №3:");
+         Console.WriteLine("№3:");
 
          third:
-         int a0 = 18;
+         int a0 = 21;
          int S = 10410;
          int n;
          try
          {
-            Console.WriteLine("Введите кол-во членов последовательности");
+            Console.WriteLine("Enter n");
             n = Convert.ToInt32(Console.ReadLine());
          }
          catch
          {
-            Console.WriteLine("Вы ввели неккоректное значение");
+            Console.WriteLine("Error");
             goto third;
          }
          if (n == 1)
@@ -93,14 +93,14 @@ namespace _1st_Lesson{
          }
          else if (n == 0)
          {
-            Console.WriteLine("Вы ввели неккоректное значение");
+            Console.WriteLine("Error");
             goto third;
          }
          else
          {
-         double d = (2*S - 2*a*n)/(n*(n-1));
+         double d = (2*S - 2*a0*n)/(n*(n-1));
          double an = a0 + d*(n-1);
-         Console.WriteLine($"d = {Math.Round(d, 2)}, an = {Math.Round(an, 2)}");
+         Console.WriteLine($"d = {Math.Round(d, 2)} an = {Math.Round(an, 2)}");
          }
       }
    }
