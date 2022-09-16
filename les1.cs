@@ -8,8 +8,8 @@ namespace _1st_Lesson
         {
             #region Task1
 
-            double weight = 58.0, height = 1.65
-            if (height <= 0)
+            double weight = 58.0, height = 1.65;
+            if (height <= 0);
             {
                 Console.WriteLine("imposible");
             }
@@ -35,19 +35,19 @@ namespace _1st_Lesson
 
             int a0 = 18;
             int S = 12408;
-            //          â ïðîöåññå, âåðíåòñÿ â ñêîðîì âðåìåíè
+            //          Ã¢ Ã¯Ã°Ã®Ã¶Ã¥Ã±Ã±Ã¥, Ã¢Ã¥Ã°Ã­Ã¥Ã²Ã±Ã¿ Ã¢ Ã±ÃªÃ®Ã°Ã®Ã¬ Ã¢Ã°Ã¥Ã¬Ã¥Ã­Ã¨
 
             #endregion
             /* Tasks:
              * 1. Find your BMI - body mass index
              * 
              * 2. Find the length of the ellipse sector curve with:
-             *  a = 100 % (¹ in the group)
-             *  b = age - (a / ¹ in the group)
-             *  grad = 10 * (¹ in the group)
+             *  a = 100 % (Â¹ in the group)
+             *  b = age - (a / Â¹ in the group)
+             *  grad = 10 * (Â¹ in the group)
              * 
              * 3. Find the step (d) and nth term of an Arithmetic Sequence when:
-             *  a0 = (¹ in the group)
+             *  a0 = (Â¹ in the group)
              *  S = 1ddmm of your birth day
              */
         }
