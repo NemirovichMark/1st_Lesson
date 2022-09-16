@@ -9,14 +9,10 @@ namespace _1st_Lesson
             #region Task1
 
             double weight = 58.0, height = 1.65;
-            if (height <= 0);
-            {
-                Console.WriteLine("imposible");
-            }
-            else
+            if (height > 0)
             {
                 double BMI = (weight / height * height);
-                Console.WriteLine(BMI);
+                Console.WriteLine(weight / height * height);
             }
 
             #endregion
@@ -35,7 +31,19 @@ namespace _1st_Lesson
 
             int a0 = 18;
             int S = 12408;
-            //          â ïðîöåññå, âåðíåòñÿ â ñêîðîì âðåìåíè
+            int n = Convert.ToInt32(Console.ReadLine());
+            if (n > 0)
+            {
+                double Aq = 2 * S / n - a0;
+                double d = (Aq - a0) / n;
+                Console.WriteLine(d);
+                Console.WriteLine(Aq);
+
+            }
+            else
+            {
+                Console.WriteLine("Incorrect (n)");
+            }
 
             #endregion
             /* Tasks:
