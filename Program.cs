@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace _1st_Lesson
 {
     class Program
@@ -81,4 +81,3 @@ namespace _1st_Lesson
         }
     }
 }
-
