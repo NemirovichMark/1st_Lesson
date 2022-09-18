@@ -43,7 +43,7 @@ namespace _1st_Lesson
             #region Task3
 
             int a0 = 25;
-            int S = 1406;
+            int S = 11406;
             int num;
             Console.WriteLine("Enter the member number of the progression");
             while (!int.TryParse(Console.ReadLine(), out num) || num <= 0)
