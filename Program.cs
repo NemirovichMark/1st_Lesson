@@ -39,14 +39,20 @@ namespace _1st_Lesson
             double pi = 3.141592653589793;
             Console.WriteLine($"The length of the ellipse sector curve = {(a + b) * pi * (grad / 360)}");
             #endregion
+
             #region Task3
+
+            int a0 = 25;
             int S = 1406;
-            int a1 = 25;
+            int num;
             Console.WriteLine("Enter the member number of the progression");
-            int n = Convert.ToInt32(Console.ReadLine());
-            double an = 2 * S / n - a1;
-            double d = (an - a1) / (n - 1);
-            Console.WriteLine("Member of the progression: " + an);
+            while (!int.TryParse(Console.ReadLine(), out num) || num <= 0)
+            {
+                Console.WriteLine("Input must be a positive integer");
+            }
+            double an = 2 * S / num - a0;
+            double d = num > 1 ? (an - a0) / (num - 1) : (an - a0);
+            Console.WriteLine($"Value of member number {num}: " + an);
             Console.WriteLine("Step of the progression: " + d);
             #endregion 
 
