@@ -183,3 +183,49 @@ namespace _1st_Lesson
         }
     }
 }
+            1.
+                internal class Program
+                {
+                    private static void Main(string[] args)
+                    {
+                        double height = 1.82;
+                        double weight = 63;
+                        double bmi = weight / (height * height);
+                        Console.WriteLine(bmi);
+                    }
+                }
+            2.  internal class Program
+                {
+                    private static void Main(string[] args)
+                    {
+                        double a = 100 % 20;
+                        double b = 18 - (a / 20);
+                        double grad = 10 * 20;
+                        double P = Math.Abs(4*(Math.PI*a*b+(a-b))/(a+b));
+                        double length = grad * (P / 360);
+                        Console.WriteLine(length);
+
+                    }
+                }
+              3.
+                    internal class Program
+                    {
+                        private static void Main(string[] args)
+                        {
+                            double a0 = 20;
+                            double S = 12907;
+
+                            int N = Convert.ToInt32(Console.ReadLine());
+                            if (N > 1)
+                            {
+                                double an = (S / N) * 2 - a0;
+                                double d = (an - a0) / (N - 1);
+                                Console.WriteLine(an);
+                                Console.WriteLine(d);
+                            }
+                            else
+                            {
+                                Console.WriteLine("BROKEN");
+                            }
+                        }
+                    }
