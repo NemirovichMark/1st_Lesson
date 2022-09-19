@@ -30,10 +30,17 @@ namespace _1st_Lesson
             const int sum = 12011;
             Console.WriteLine("Введите номер члена прогрессии");
             int n = int.Parse(Console.ReadLine());
-            int an = sum / n * 2 - a0;
-            double D = (2.0 * sum - 2.0 * a0 * n) / (n * (n - 1.0));
-            Console.WriteLine(D.ToString());
-            Console.WriteLine(an.ToString());
+            if (n < 2)
+            {
+                Console.WriteLine("Error, try again");
+            }
+            else
+            {
+                int an = sum / n * 2 - a0;
+                double D = (2.0 * sum - 2.0 * a0 * n) / (n * (n - 1.0));
+                Console.WriteLine(D.ToString());
+                Console.WriteLine(an.ToString());
+            }
             #endregion
 
 
