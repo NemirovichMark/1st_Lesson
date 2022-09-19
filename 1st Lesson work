@@ -48,11 +48,11 @@ class Programm
     {
        int a0=29;
        int S=12409;
-       int n=Convert.ToInt(Console.Readline());
-       double Step=(2*(S-n*a0))/n*(n-1);
-       double N=a0+d*(n-1);
-       Console.WriteLine(Step);
-       Console.WriteLine(N);
+       int n = Convert.ToInt32(Console.ReadLine());
+       double N=2*S/n-a0;
+       double Step=(aN-a0)/(n - 1);
+       Console.WriteLine("The step is " + Step);
+       Console.WriteLine("The term is " + N);
         
     }
 }
