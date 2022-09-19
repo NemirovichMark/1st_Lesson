@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _1st_Lesson
 {
@@ -68,10 +68,3 @@ namespace _1st_Lesson
 
     }
 }
- 
-
-
-
-
-
-            
