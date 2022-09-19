@@ -16,9 +16,9 @@ namespace _1st_Lesson
              *  b = age - (a / № in the group)
              *  grad = 10 * (№ in the group)
              * 
-             * 3. Find the step (d) and nth term of an Arithmetic Sequence when:
-             *  a0 = (№ in the group)
-             *  S = 1ddmm of your birth day
+             * 3. Найдите шаг (d) и n-й член арифметической последовательности, когда:
+             *  a0 = 11
+             *  S = 11502
              */
 
             //Task 1
@@ -50,26 +50,19 @@ namespace _1st_Lesson
             Console.WriteLine(P);
             }
             //Task 3
-            //a0==11,S==11502,d==?,an==?
+            //a0==11,S==11502
             int a0 = 11;
             int S = 11502;
-            int n = 2 * S / S + a0;
-            int d = 2 * (S - n * a0) / n * (n - 1);
-            Console.WriteLine("Введите номер члена последовательности(от 2)");
-            int an = Convert.ToInt32(Console.ReadLine());
-            if (an <= 0)
+            Console.WriteLine("Введите номер последнего члена n");
+            int n = Convert.ToInt32(Console.ReadLine());
+            double an = 2 * S / n - a0;
+            double d = (an - a0) / (n - 1);
+            Console.WriteLine($"Последний член an {n}: " + an);
+            Console.WriteLine("Разность прогрессии: " + d);
+            
             {
-            Console.WriteLine("Вы ввели не допустимое значение");
-            }
-            else
-            {
-            int last = a0 + (an - 1) * d;
-            Console.WriteLine($"{an} член прогрессии равен {last},разность арифметической прогрессии равна {d}");
-            }
-            { 
             Console.ReadLine();
             }
-
 
 
 
