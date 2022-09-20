@@ -167,6 +167,47 @@ namespace _1st_Lesson
                 Console.WriteLine($"The f({x}) = {y}");
             }
             #endregion
+                
+                
+                
+                //TASKS
+                
+                                
+             #region №1
+                double weight = 72.3;
+                double height = 1.82;
+                double BMI = weight / (height * height);
+                Console.WriteLine($"My BMI: {BMI}");
+             #endregion
+                
+             #region №2
+                double number = 18; #my number in the group 
+                double age = 17; #my age
+                double a = 100 % number;
+                double b = age - (a / number);
+                double grad = (10 * number);
+                double leight = 3.14 * a * b * grad;
+                Console.WriteLine(leight);
+             #endregion
+                
+             #region №3
+                double a0, S;
+                a0 = 18;
+                S = 601;
+                Console.WriteLine("Enter the amount of terms of the arithmetic progression");
+                int n = Convert.ToInt32(Console.ReadLine());
+                if (n > 0)
+                {
+                    double an = (2 * S) / n - a0;
+                    double d = S/n;
+                    Console.WriteLine($"step(d): {d} nth term: {an}");
+                }
+                else
+                {
+                    Console.WriteLine("You entered the wrong number");
+                }
+            #endregion
+                
 
             /* Tasks:
              * 1. Find your BMI - body mass index
