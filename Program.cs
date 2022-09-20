@@ -55,7 +55,7 @@ namespace _1st_Lesson
             int S = 11502;
             Console.WriteLine("Введите номер последнего члена n");
             int n = Convert.ToInt32(Console.ReadLine());
-            if (n <=0)
+            if (n <=1 )
             {
             Console.WriteLine("Введите целое положительное число больше 0");
             }
@@ -63,7 +63,7 @@ namespace _1st_Lesson
             { 
            
             double an = 2 * S / n - a0;
-            double d = (an - a0) / (n - 1);
+            double d =(an - a0) / (n - 1);
             Console.WriteLine($"Последний член an {n}: " + an);
             Console.WriteLine("Разность прогрессии: " + d);
             }
