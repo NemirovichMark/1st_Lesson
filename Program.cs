@@ -47,7 +47,7 @@ using System;
             int S=12409;
             Console.WriteLine("Enter the member number of the progression:");
             int n=Convert.ToInt32(Console.ReadLine());
-            if(n!=1 && n!=29){
+            if(n!=1 && n!=29 && n!=0){
                 double N=2*S/n-a0;
                 double Step=(N-a0)/(n-1);
                 Console.WriteLine("The step is " + Step);
