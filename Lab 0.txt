@@ -1,0 +1,36 @@
+{
+//Task 1
+const double weight = 60;
+const double height = 1.86;
+double bmi;
+bmi = weight / (height * height);
+Console.WriteLine($"BMI={bmi}");
+
+//Task 2
+const double a = 100 % 14;
+const double b = 18 - a / 14;
+const double grad = 10 * 14;
+const double pi = 3.14;
+double p = 4 * ((pi * a * b + (a - b)) / (a + b));
+double length;
+p = 4 * ((pi * a * b + (a - b)) / (a + b));
+length = p / 360 * grad;
+Console.WriteLine($"Length={length}");
+
+//Task 3
+const double a0 = 14;
+const double s = 12101;
+double an;
+double d;
+double n = Convert.ToDouble(Console.ReadLine());
+if (n>=1)
+{
+an = (2 * s) / (n+1) - a0;// n+1, так как отсчёт начали с нуля
+d = (an - a0) / (n);
+Console.WriteLine($"Step={d}");
+}
+else
+{
+Console.WriteLine("Wrong");//Неправильное количество элементов последовательности
+}
+}
