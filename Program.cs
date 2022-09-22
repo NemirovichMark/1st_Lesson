@@ -1,4 +1,4 @@
-﻿double h = 1.65;
+double h = 1.65;
 int v = 44;
 Console.WriteLine(v / (h * h));
 int a = 100 % 5;
@@ -15,5 +15,3 @@ if (n1> 1)
     double d = (s / n1 * 2 - 2 * a0) / (n1 - 1);
     Console.WriteLine(an);
     Console.WriteLine(d);
-
-
