@@ -180,6 +180,36 @@ namespace _1st_Lesson
              *  a0 = (№ in the group)
              *  S = 1ddmm of your birth day
              */
+                #region 1
+                double BMI = (65 / (Math.Pow(1.8,2)));
+            Console.WriteLine($ " My BMI is {BMI});
+                #endregion
+                              
+                #region 2
+                double A = 100 % 11;
+                double B = 19 - (A / 11);
+                int Grad = 10 * 11;
+                double Result, Thelengthofthecurve;
+                Thelengthofthecurve = 4 * ((Math.PI * A * B) + Math.Pow(A - B, 2)) / (A + B);
+                Result = Thelengthofthecurve / 360 * Grad;
+                Console.WriteLine($"The length of the ellipse curve: {Thelengthofthecurve}");
+                #endregion
+                              
+                #region 3
+                int A0 = 6;
+                int S = 12909;
+                int N;
+                Int32.TryParse(Console.ReadLine(), out N);
+                if (N > 1)
+                {
+
+
+                double An = (2 * S / N) - A0;
+                double D = (An - A0) / (N - 1);
+                Console.WriteLine($"Step: {D}. nth term: {An}");
+                }
+                #endregion
+                
         }
     }
 }
