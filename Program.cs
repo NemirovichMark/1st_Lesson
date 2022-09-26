@@ -200,9 +200,14 @@ namespace _1st_Lesson
                 int S = 12909;
                 int N;
                 Int32.TryParse(Console.ReadLine(), out N);
+                if (N > 1)
+                {
+
+
                 double An = (2 * S / N) - A0;
                 double D = (An - A0) / (N - 1);
                 Console.WriteLine($"Step: {D}. nth term: {An}");
+                }
                 #endregion
                 
         }
