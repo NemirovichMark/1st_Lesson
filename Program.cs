@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Configuration;
 
 namespace SE.task1
@@ -66,5 +66,3 @@ namespace SE.task1
         }
     }
 }
-
-
