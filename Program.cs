@@ -4,28 +4,71 @@ namespace FirstLab
 {
     class Program
     {
-        static void Main()
-        {   
-            //1
-            double height = 1.9;
-            double weight = 63;
-            Console.WriteLine(weight / Math.Pow(height, 2));
-            //2
-            double a = 100 & 17;
-            double b = 18 - (a / 17);
-            double grad = 10 * 17;
-            Console.WriteLine(Math.PI * (a + b) + (grad / 360));
-            //3
-            double frs_e = 17;
-            double s = 11008;
-            if (!int.TryParse(Console.ReadLine(), out int cnt))
+        static void Main(string[] args)
+        {
+            #region task_0.1
+            Console.WriteLine("Task 0.1:");
+            try
             {
-                Console.WriteLine("Ввод неверен!");
-                return;
+                Console.WriteLine("Insert your weight (kg):");
+                double mm = double.Parse(Console.ReadLine());
+                while (mm <= 0)
+                {
+                    Console.WriteLine("ERROR: weight cannot be negative or zero");
+                    mm = int.Parse(Console.ReadLine());
+                }
+                Console.WriteLine("Insert your height (cm):");
+                double hh = double.Parse(Console.ReadLine());
+                while (hh <= 0)
+                {
+                    Console.WriteLine("ERROR: height cannot be negative or zero");
+                    hh = int.Parse(Console.ReadLine());
+                }
+                double xx1 = mm / ((hh / 100) * (hh / 100));
+                Console.WriteLine($"\nWeight: {mm}\nHeight: {hh}\nBMI: {Math.Round(xx1, 2)} \n\n\n");
             }
-            double lst_e = (s / cnt) * 2 - frs_e;
-            double step = (lst_e - frs_e) / (cnt - 1);
-            Console.WriteLine($"Last element: {lst_e} Step: {step}");
+
+            catch (Exception e)
+            {
+                Console.WriteLine($"ERROR: Wrong input \n {e}");
+            }
+
+
+            #endregion
+
+
+            #region task_0.2    
+            Console.WriteLine("Task 0.2:");
+            double aa = 100 % 7;
+            double bb = 21 - (aa / 7);
+            int grad = 10 * 7;
+            double xx2 = Math.PI * (aa + bb) * grad / 360;
+            Console.WriteLine($"b = {Math.Round(bb, 2)}\ngrad = {grad}\na = {aa}\n\nThe length of the ellipse sector curve: {Math.Round(xx2, 2)} \n\n\n");
+            #endregion
+
+
+            #region task 0.3 
+            Console.WriteLine("Task_0.3:");
+            double aa0 = 7;
+            double ss = 12511;
+            try
+            {
+                Console.WriteLine("Insert n:");
+                double nn = double.Parse(Console.ReadLine());
+                while (nn <= 1)
+                {
+                    Console.WriteLine("ERROR: n cannot be less then 2 ");
+                    nn = int.Parse(Console.ReadLine());
+                }
+                double nth = ss * 2 / nn - aa0;
+                double dd = (nth - aa0) / (nn - 1);
+                Console.WriteLine($"\nStep (d) = {Math.Round(dd, 2)}\nnth term of the sequence = {Math.Round(nth, 2)}");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"ERROR: Wrong input \n {e}");
+            }
+            #endregion
         }
     }
 }
