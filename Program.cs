@@ -1,185 +1,194 @@
-using System;
-
-namespace _1st_Lesson
+//First Level.Task 4
+Console.WriteLine("Enter x:");
+double x = Convert.ToDouble(Console.ReadLine());
+double s = 0;
+double a = Math.Cos(x);
+for (int i = 2; i <= 9; i++)
 {
-    class Program
+    s = s + a;
+    a = Math.Cos(i * x) / Math.Pow(x, i - 1);
+
+}
+Console.WriteLine($"The answer: {s}");
+
+//First Level.Task 9
+double s = 0;
+int factorial = 1;
+for (int i = 1; i <= 6; i++)
+{
+    factorial *= i;
+    s += (Math.Pow(-1, i) * Math.Pow(5, i) / factorial);
+}
+Console.WriteLine($"The answer: {s}");
+
+//First Level.Task 15
+int a = 1;
+int b = 2;
+int c = 1;
+int d = 1;
+int q;
+int k;
+for (int i = 1; i <= 3; i++)
+{
+    q = a + b;
+    k = c + d;
+    a = b;
+    c = d;
+    b = q;
+    d = k;
+}
+Console.WriteLine("The answer:");
+Console.WriteLine(b + "/" + d);
+
+//First Level.Task 16
+double corn = 1;
+for (int i = 1; i <= 63; i++)
+{
+  corn+=Math.Pow(2, i);
+}
+corn /= 15;
+Console.WriteLine(corn);
+//First Level.Task 18
+int s = 10;
+for (int i = 3; i <= 24; i += 3)
+{
+     s *= 2;
+     Console.WriteLine(s);
+}
+    
+
+//Second Level.Task 2
+using System.Xml.Schema;
+int p = 1;
+int maxII = 0;
+for (int i = 1; p <= 30000; i += 3)
+{
+    if (p * (i + 3) <= 30000)
     {
-        static void Main(string[] args)
-        {
-            #region Integers
-            int a, b = 5;
-            int c;
-            int d = 10;
-
-            // just for info
-            short smallIntegers = Int16.MaxValue;
-            long outstretchedInteger = Int64.MinValue;
-            uint notNegativeIntegers = 5;   // not negative
-            byte FF = 255;                  // not sigative
-            sbyte ff = -127;                // signed (+-) byte
-
-
-            a = (b / 5) + d%4 - 2; // при делении целых чисел всегда округляется вниз
-            c = -123546;
-
-            // Используйте интерполированные строки ($) для вывода и будет вам счастье
-            Console.WriteLine($"Integers: a={a}, b={b}, c={c}, d={d}");
-            #endregion
-
-            #region Doubles
-            double aa, bb = 5.0;
-            double cc;
-            double dd = 12.251;
-
-            float f = 123.4f;
-            decimal m = 123.4m;
-
-            aa = (bb / 5) + dd % 4 - 2; // тут проблем с округлением не будет
-            cc = b / 5.0; // важно, чтобы 1 из чисел было дробным, тогда будет довольно точный расчет
-            
-            Console.WriteLine($"Doubles: aa={aa}, bb={bb}, cc={cc}, dd={dd}");
-            #endregion
-
-            #region Strings
-            string s = "", str = string.Empty; // 2 пустые строки
-            string name = "Vasya";
-            string famile = "P" + "u" + "p" + "kin"; // не делайте так! Тут строка пересоздается 4 раза.
-
-            Console.WriteLine(name + " " + famile + " cool guy =)");
-            #endregion
-
-            #region Chars
-            char letter = 'a';
-            char digit = '0';
-            char symbol = '+';
-
-            Console.WriteLine($"Zero is " + digit); 
-            // тут идет преобразование символа в строку, так как строка - это набор символов
-            #endregion
- 
-                
-            #region Booleans
-            bool t = true, f;
-            f = false;
-            t = 5 > 2;
-            t = (1 == 0) || ((1 > 0) && true);
-            f = !t;
-
-            Console.WriteLine($"True is {t,10}. false is {f,-10}"); 
-            #endregion
-
-            Console.WriteLine($"Zero is " + digit); 
-            // тут идет преобразование символа в строку, так как строка - это набор символов
-            #endregion
-
-            #region Casting and type conversion
-            #region Implicit Conversions
-            aa = a;
-            b = 5;
-            bb = 5;
-            #endregion
-
-            #region Explicit conversions (casts)
-            //a = aa;
-            a = (int)aa; // Cast double to int. Приведение дробного к целому.
-            bb = (double)b; // Нет смысла из подмножества приводить к множеству double > int
-            #endregion
-
-            #region Сonversions by methods
-            s = a.ToString();
-            str = aa.ToString();
-
-            a = Int32.Parse("123");
-           // bb = Double.Parse("Hey, are you ready to errors?");
-            #endregion
-
-            // Полная таблица явных и неявных преобразований, если заинтересовало (будет полезно):
-            // https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/numeric-conversions
-            #endregion
-
-            #region TryCatchFinally
-            // How to avoid errors?
-            int divizionByZero = 50;
-            try
-            {
-                // this block have to be
-                a = 0; 
-                divizionByZero = divizionByZero / a;
-            }
-            catch
-            {
-                //throw new DivideByZeroException();
-            }
-            finally
-            {
-                Console.WriteLine("Would a == 0 or not, this block would work");
-                Console.WriteLine(divizionByZero);
-            }
-
-            #region TryMethods
-            if (Int32.TryParse(str, out int numberFromString))
-            {
-                divizionByZero /= numberFromString;
-            }
-            #endregion
-
-            #endregion
-
-            #region Math class
-            a = (int)Math.Pow(5, 2);
-            bb = Math.Sin(aa); // Угол, измеряемый в радианах.
-            c = Math.Abs(c);
-            #endregion
-
-            #region First example
-            // Find the roots of the equation
-
-            // 3.2x + 8.7x^2 = 17.9 
-
-            aa = 8.7;
-            bb = 3.2;
-            cc = -17.9;
-
-            double discriminant = Math.Pow(bb, 2) - 4 * aa * cc;
-            try
-            {
-                double x1 = (-bb + Math.Sqrt(discriminant)) / 2 * aa;
-                double x2 = (-bb - Math.Sqrt(discriminant)) / 2 * aa;
-
-                Console.WriteLine($"Roots of the eqution are: {x1, 5} and {x2, 5}");
-            }
-            catch
-            {
-                Console.WriteLine("There is no rational roots");
-            }
-            #endregion
-
-            #region Second example
-            // Find the value of f(x) when x is...
-            // f(x) = 25.3x + lg(4|x|+50) - exp^(x/100)
-            Console.WriteLine("Type the integer x");
-            if(Int32.TryParse(Console.ReadLine(), out int x))
-            { 
-                aa = 25.3 * x;
-                bb = Math.Log10(4 * Math.Abs(x) + 50);
-                cc = Math.Exp(x / 100);
-                var y = aa + bb - cc; // var используйте, когда справа написан тип или вам подойдет любой принимаемый тип
-                Console.WriteLine($"The f({x}) = {y}");
-            }
-            #endregion
-
-            /* Tasks:
-             * 1. Find your BMI - body mass index
-             * 
-             * 2. Find the length of the ellipse sector curve with:
-             *  a = 100 % (№ in the group)
-             *  b = age - (a / № in the group)
-             *  grad = 10 * (№ in the group)
-             * 
-             * 3. Find the step (d) and nth term of an Arithmetic Sequence when:
-             *  a0 = (№ in the group)
-             *  S = 1ddmm of your birth day
-             */
-        }
+        p *= i;
+        maxII = i;
     }
+    else break;
+}
+Console.WriteLine($"Max n = {maxII}");
+
+
+//Second Level.Task 4
+using System.Xml.Schema;
+double x = Convert.ToDouble(Console.ReadLine());
+double s = 1.0;
+int n = 2;
+if ((x > -1) & (x < 1) & (x != 0))
+{
+    while (Math.Abs(x) > 0.0001)
+    {
+      x = Math.Pow(x, n);
+        s += x;
+        n *= 2;
+    }
+}
+else Console.WriteLine("Error");
+
+Console.WriteLine($"Max n = {s}");
+
+//Second Level.Task 4
+ double x = Convert.ToDouble(Console.ReadLine());
+            double s = 0.0;
+            int n = 0;
+ 
+            if ((x > -1) && (x < 1))
+            {
+                double a = Math.Pow (x, n);
+ 
+                while (Math.Abs(a) > 0.0001)
+                {
+                    s += a;
+                    n += 2;
+                    a = Math.Pow(x, n);
+ 
+                }
+                Console.WriteLine($"summ = {s}");
+ 
+            }
+            else
+            { 
+                Console.WriteLine("Error");
+            }
+
+
+//Second Level.Task 7-8a
+double p = 10;
+double s = 0.0;
+int n = 1;
+while (n<=7)
+{
+
+    s += p;
+    n += 1;
+    p *= 1.1;
+}
+Console.WriteLine($"Summ way ={s} kilometers");
+
+//Second Level.Task 7-8b
+double p = 10;
+double s = 0.0;
+int n = 1;
+while (s + p < 100)
+{
+    s += p;
+    n += 1;
+    p *= 1.1;
+}
+Console.WriteLine($"The number of days = {n} ");
+
+//Second Level.Task 7-8v
+double p = 10;
+double s = 0.0;
+int n = 1;
+while (p <= 20)
+{
+    s += p;
+    n += 1;
+    p *= 1.1;
+}
+Console.WriteLine($"The number of days = {n} ");
+
+ //Third level. Task 1
+const double xh = 0.1, xk = 1.0, h = 0.2, eps = 0.0001;
+double x, y, s, a;
+int n = (int)((xk - xh) / h + 1), i;
+x = xh;
+for (int j = 1; j <= n; j++)
+{
+    s = 1; a = 1; i = 1;
+    do
+    {
+        a = (-a * x * x) / ((2 * i - 1) * 2 * i);
+        s += a;
+        i += 1;
+    }
+    while (Math.Abs(a) >= eps);
+    y = Math.Cos(x);
+    Console.WriteLine("x= {0:f4} s= {1:f4} y= {2:f4}", x, s, y);
+    x += h;
+}
+
+//Third level. Task 4
+const double xh = 0.1, xk = 1.0, h = 0.2, eps = 0.0001, e = 2.71828;
+double x, y, s, a;
+int n = (int)((xk - xh) / h + 1), i;
+x = xh;
+for (int j = 1; j <= n; j++)
+{
+    s = 1; a = 1; i = 1;
+    do
+    {
+        a = a * (2 * i + 1) * x * x / (2 * i * i - i);
+        s += a;
+        i += 1;
+    }
+    while (Math.Abs(a) >= eps);
+    y = (1 + 2 * x * x) * Math.Pow (e, x * x);
+    Console.WriteLine("x= {0:f4} s= {1:f4} y= {2:f4}", x, s, y);
+    x += h;
 }
