@@ -20,7 +20,6 @@ namespace Sololearn
                 for(int i=0;abs(meat)>=0.0001;i++){
                     meat=Math.Pow(-1,i)*Math.Pow(x,2*i)/fact(2*i);
                     sum+=meat;
-                    y=Math.Cos(x);
                 }
                 y=Math.Cos(x);
                 Console.WriteLine($"X: {x}, S: {sum}, Y: {y}");
