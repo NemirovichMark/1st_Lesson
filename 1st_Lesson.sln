@@ -1,25 +1,173 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31019.35
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1st_Lesson", "1st_Lesson.csproj", "{603507CA-00DB-4E58-8BDA-6D91AAE026F2}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{603507CA-00DB-4E58-8BDA-6D91AAE026F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{603507CA-00DB-4E58-8BDA-6D91AAE026F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{603507CA-00DB-4E58-8BDA-6D91AAE026F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{603507CA-00DB-4E58-8BDA-6D91AAE026F2}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {61462EB7-9D52-4DC6-AE25-E4251A889E2A}
-	EndGlobalSection
-EndGlobal
+#region level1 num4
+Console.WriteLine("Введите число x не равное 0.");
+double x = Convert.ToDouble(Console.ReadLine());
+double a = Math.Cos(x), s = 0;
+if (x != 0)
+{
+    for (int i = 1; i <= 9; i++)
+    {
+        s = s + a;
+        a = Math.Cos(i * x) / Math.Pow(x, i - 1);
+    }
+    Console.WriteLine($"Ответ: {s}");
+}
+else if (x == 0)
+{
+    Console.WriteLine("Пожалуйста, введите число не равное нулю.");
+}
+#endregion
+
+#region level1 num9
+double s = 0;
+int fact = 1;
+for (int i = 1; i<=6; i++)
+{
+    fact = fact * 1;
+    s = s + (Math.Pow(-1, 1) * Math.Pow(5, i) / fact);
+}
+Console.WriteLine($"Ответ: {s}");
+#endregion
+
+#region level1 num15
+int a = 1, b = 2, c = 1, d = 1, r, e;
+for (int i=1; i<=3; i++)
+{
+    r = a + b;
+    e = c + d;
+    a = b;
+    c = d;
+    b = r;
+    d = e;
+}
+Console.WriteLine($"Ответ:{b}/{d}");
+#endregion
+
+#region level1 num16
+double zern = 0, klet = 1;
+for (int i = 1; i <= 64; i++) 
+{
+    zern = zern + klet/15000000;
+    klet = klet * 2;
+}
+Console.WriteLine($"Ответ: {zern}");
+#endregion
+
+#region level1 num18
+int klet = 10;
+for (int i = 3; i <= 24; i = i + 3) 
+{
+    klet = klet * 2;
+    Console.WriteLine($"Ответ:{klet}");
+}
+#endregion
+
+#region level2 num2
+int p = 1, a = 0;
+for (int i = 1; p <= 30000; i = i + 3)
+{
+    if (p * (i + 3) <= 30000)
+    {
+        p = p * i;
+        a = i;
+    }
+    else break;
+}
+Console.WriteLine($"Ответ:{a}");
+#endregion
+
+#region level2 num4
+double uservvod = Convert.ToDouble(Console.ReadLine()) ;
+double s = 0;
+int a = 0;
+if ((uservvod > -1) && (uservvod < 1))
+{
+    double b = Math.Pow(uservvod, a);
+    while(Math.Abs(b)>0.0001)
+    {
+        s = s + a;
+        a = a + 2;
+        b = Math.Pow(uservvod, a);
+    }
+    Console.WriteLine($"Ответ:{s}");
+}
+else
+{
+    Console.WriteLine("Пожалуйста, проверьте что -1 < x < 1");
+}
+#endregion
+
+#region level2 num7-8a
+double a = 10, b = 0;
+int d = 1;
+while (d<=7)
+{
+    b = b + a;
+    d = d + 1;
+    a = a * 1.1;
+}
+Console.WriteLine($"Ответ:{b}");
+#endregion
+
+#region level2 num7-8b
+double a = 10, b = 0;
+int d = 1;
+while (a + b < 100)
+{
+    b = b + a;
+    d = d + 1;
+    a = a * 1.1;
+}
+Console.WriteLine($"Ответ:{d}");
+#endregion
+
+#region level2 num7-8v
+double a = 10, b = 0;
+int d = 1;
+while (a <= 20)
+{
+    b = b + a;
+    d = d + 1;
+    a = a * 1.1;
+}
+Console.WriteLine($"Ответ:{d}");
+#endregion
+
+#region level3 num1
+const double a = 0.1, b = 1, h = 0.1, d = 0.0001;
+double y, f = 0;
+int i = 0;
+for (double x = a; x <= b; x = x + h)
+{
+    Console.WriteLine("y=f(x)");
+    y = Math.Cos(x);
+    Console.WriteLine($"{y}=f({x})");
+    double s = 1;
+    while (Math.Abs(s) >= d)
+    {
+        i = i + 1;
+        f = f + s;
+        s = -s * x * x / ((2 * i - 1) * 2 * i);
+    }
+}
+Console.WriteLine($"Ответ:{f}");
+#endregion
+
+#region level3 num6
+const double a = 0.1, b = 1, h = 0.1, d = 0.0001;
+double y, f = 0;
+int i = 1;
+for (double x = a; x <= b; x = x + h)
+{
+    Console.WriteLine("y=f(x)");
+    y = (1 + x * x * Math.Atan(x)) / 2 - 0.5 * x;
+    Console.WriteLine($"{y}=f({x})");
+    double s = x * x * x / 5;
+    while (Math.Abs(s) >= d)
+    {
+        i = i + 1;
+        f = f + s;
+        s = -s * x * x * (2 * i - 3) / (2 * i + 1);
+    }
+}
+Console.WriteLine($"Ответ:{f}");
+#endregion
