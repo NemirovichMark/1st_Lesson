@@ -23,24 +23,27 @@ namespace _1st_Lesson
                 Console.WriteLine(lp);
                 #endregion
                 #region Task3
-                int a0 = 10;
+                Console.WriteLine("Моя дата рождения - 15.01.2004");
                 int S = 11501;
-                int n = Convert.ToInt32(Console.ReadLine());
-                if ( n - a0 <= 0 )
+                Console.WriteLine("Мой номер в группе - 10");
+                int a0 = 10;
+                Console.WriteLine("Введите количество членов арифмитической последовательности");
+                int n = Int32.Parse(Console.ReadLine());
+                if (n > 0)
                 {
-                    Console.WriteLine("invalid value of parameters");
+                    double an = (2 * S) / n - a0;
+                    double d = (an - a0);
+                    Console.WriteLine("Разница между двумя членами последовательности равняется " + d + "!");
                 }
                 else
                 {
-                    double ad = 2 * S / n - a0;
-                    double d = (ad - a0) / n;
-                    Console.WriteLine(d);
-                    Console.WriteLine(ad);
+                    Console.WriteLine("Иди учить математику! ");
                 }
+                Console.ReadLine();
                 #endregion
+              
 
-
-
+                    
             }
 
         }
